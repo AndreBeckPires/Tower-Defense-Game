@@ -5993,6 +5993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 780461985}
   - component: {fileID: 780461984}
+  - component: {fileID: 780461986}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -6030,6 +6031,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780461986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780461983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1c5da2329f1a246952018e49c6b167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sTurretPrefab: {fileID: 2790079048584714787, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
 --- !u!1001 &809727359
 PrefabInstance:
   m_ObjectHideFlags: 0
