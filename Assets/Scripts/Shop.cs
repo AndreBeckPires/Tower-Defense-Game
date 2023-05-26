@@ -5,22 +5,24 @@ public class Shop : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public TurretBlueprint standardTurret;
+    public TurretBlueprint anotherTurretPrefab;
     BuildManager buildManager;
 
     void Start()
     {
         buildManager = BuildManager.instance;
     }
-    public void PurchaseStandardTurret()
+    public void SelectStandardTurret()
     {
         Debug.Log("Standard Turret Purchased");
-        buildManager.SetTurretToBuild(buildManager.sTurretPrefab);
+        buildManager.SelectTurretToBuild(standardTurret);
 
     }
-    public void PurchaseADifferentTurret()
+    public void SelectADifferentTurret()
     {
         Debug.Log("Another  Purchased");
-        buildManager.SetTurretToBuild(buildManager.anotherTurretPrefab);
+        buildManager.SelectTurretToBuild(anotherTurretPrefab);
     }
 }
 

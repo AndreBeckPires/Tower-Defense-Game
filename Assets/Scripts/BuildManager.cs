@@ -16,19 +16,30 @@ public class BuildManager : MonoBehaviour
         instance = this; //sempre que começa o jhogo o build manager vai para  o instance e ai outros podem referenciar o instance, quase como um ponteiro do c++;(singleton patterns)
     }
 
-    public GameObject sTurretPrefab;
-    public GameObject anotherTurretPrefab;
+   // public GameObject sTurretPrefab;
+  //  public GameObject anotherTurretPrefab;
 
-    private GameObject tToBuild;
+    private TurretBlueprint tToBuild;
 
 
-
-    public GameObject GetTurretToBuild()
-    {
-        return tToBuild;
+    public bool CanBuild { 
+        get { return tToBuild != null; }
     }
 
-    public void SetTurretToBuild(GameObject turret)
+    public void BuildTurretOn(Node node)
+    {
+        if(PlayerStats.Money < tToBuild.cost)
+        {
+            Debug.Log("poor");
+            return;
+        }
+
+        PlayerStats.Money -= tToBuild.cost;
+        GameObject turret = (GameObject)Instantiate(tToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+        node.turret = turret;
+        Debug.Log("Money left " + PlayerStats.Money);
+    }
+    public void SelectTurretToBuild(TurretBlueprint turret)
     {
         tToBuild = turret;
     }
