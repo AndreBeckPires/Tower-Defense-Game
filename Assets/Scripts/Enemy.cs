@@ -7,10 +7,28 @@ public class Enemy : MonoBehaviour
 
     private Transform target;
     private int wavepointIndex = 0;
+    public int health = 100;
+    public int value = 50;
 
     void Start()
     {
         target = waypoints.points[0];//seleciona o primeiro ponto como targe
+    }
+
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        PlayerStats.Money += value;
+        Destroy(gameObject);
     }
 
     void Update()
