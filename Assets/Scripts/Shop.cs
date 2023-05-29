@@ -7,7 +7,8 @@ public class Shop : MonoBehaviour
 
     public TurretBlueprint standardTurret;
     public TurretBlueprint anotherTurretPrefab;
-    BuildManager buildManager;
+    public TurretBlueprint tower3;
+   BuildManager buildManager;
 
     void Start()
     {
@@ -23,6 +24,10 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Another  Purchased");
         buildManager.SelectTurretToBuild(anotherTurretPrefab);
+    }
+    public void SelectT3()
+    {
+        buildManager.SelectTurretToBuild(tower3);
     }
 }
 

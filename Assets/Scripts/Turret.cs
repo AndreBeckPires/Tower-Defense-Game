@@ -6,18 +6,26 @@ public class Turret : MonoBehaviour
 {
     private Transform target;
 
-    [Header("Attributes")]//muda de uma torre para outra
+    [Header("GENERAL")]//muda de uma torre para outra
     public float range = 15f;
+
+    [Header("Use bullets(default)")]
     public float fireRate = 1f;
     private float fireCountDown = 0f;
+    public GameObject bulletPrefab;
 
+
+
+    [Header("Use Laser")]
+    public bool useL = false;
+    public LineRenderer lineRenderer;
 
     [Header("Unity steup fields")]
     public string enemyTag = "Enemy";
     public float turnSpeed = 10f;
     public Transform partToRotate;
 
-    public GameObject bulletPrefab;
+    
     public Transform firePoint;
     // Start is called before the first frame update
     void Start()
@@ -31,20 +39,33 @@ public class Turret : MonoBehaviour
     {
        if(target == null)
         {
+            if(useL)
+            {
+                if(lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                }
+            }
+
             return;//se nao tiver target nao faz nada
         }
-        Vector3 dir = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(0f,rotation.y,0f);
 
-        if(fireCountDown <= 0f)
+        LockOnTarget();
+
+        if(useL)
         {
-            Shoot();
-            fireCountDown = 1 / fireRate;
-        }
+            LaserShoot();
+        }else
+        {
+            if (fireCountDown <= 0f)
+            {
+                Shoot();
+                fireCountDown = 1 / fireRate;
+            }
 
-        fireCountDown -= Time.deltaTime;
+            fireCountDown -= Time.deltaTime;
+
+        }
 
     }
     void UpdateTarget()
@@ -72,6 +93,26 @@ public class Turret : MonoBehaviour
     }
 
  
+
+    void LaserShoot()
+    {
+
+        if (!lineRenderer.enabled)
+        {
+            lineRenderer.enabled = true;
+        }
+
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, target.position);
+    }
+    void LockOnTarget()
+    {
+
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+    }
     void Shoot()
     {
       //  Debug.Log("Shoot");
