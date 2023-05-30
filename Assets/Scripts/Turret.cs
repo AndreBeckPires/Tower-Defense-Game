@@ -5,6 +5,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
+    private Enemy targetEnemy;
 
     [Header("GENERAL")]//muda de uma torre para outra
     public float range = 15f;
@@ -18,7 +19,11 @@ public class Turret : MonoBehaviour
 
     [Header("Use Laser")]
     public bool useL = false;
+
+    public int damageOverT  = 30;
     public LineRenderer lineRenderer;
+    public float slowP = 0.5f;
+
 
     [Header("Unity steup fields")]
     public string enemyTag = "Enemy";
@@ -85,6 +90,7 @@ public class Turret : MonoBehaviour
         if(nearestEnemey != null && shortestDistance <= range)
         {
             target = nearestEnemey.transform;
+            targetEnemy = nearestEnemey.GetComponent<Enemy>();
         }
         else
         {
@@ -97,6 +103,8 @@ public class Turret : MonoBehaviour
     void LaserShoot()
     {
 
+        targetEnemy.TakeDamage(damageOverT * Time.deltaTime);
+        targetEnemy.Slow(slowP);
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;
