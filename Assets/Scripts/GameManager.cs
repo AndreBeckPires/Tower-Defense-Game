@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool gameOver = false;
+    public static bool gameOver;
+    public GameObject gameOverUI;
 
+
+    void Start()
+    {
+        gameOver = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +26,6 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         gameOver = true;
-        Debug.Log("Acabou");
-
+        gameOverUI.SetActive(true);
     }
 }

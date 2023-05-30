@@ -31,6 +31,7 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator spawnWave()//coroutine que pode ser pausada
     {
         waveIndex++;
+        PlayerStats.Rounds++;
         for (int i = 0; i < waveIndex; i++)
         {
             spawnEnemy();

@@ -10,6 +10,11 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameManager.gameOver)
+        {
+            this.enabled = false;
+            return;
+        }
         if(Input.GetKey("w"))
         {
             transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
