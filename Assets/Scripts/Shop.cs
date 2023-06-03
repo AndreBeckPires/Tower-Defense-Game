@@ -5,9 +5,12 @@ public class Shop : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    [Header("BluePrints")]
     public TurretBlueprint standardTurret;
     public TurretBlueprint anotherTurretPrefab;
     public TurretBlueprint tower3;
+
+
    BuildManager buildManager;
 
     void Start()

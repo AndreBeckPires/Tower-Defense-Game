@@ -45,7 +45,9 @@ public class Enemy : MonoBehaviour
     {
         PlayerStats.Money += value;
         Destroy(gameObject);
+
+        WaveSpawner.EnemiesAlive--;
     }
 
-   
+
 }
