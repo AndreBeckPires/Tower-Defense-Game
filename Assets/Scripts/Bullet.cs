@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
 	public float explosionRadius = 0f;
 	public GameObject impactEffect;
 	public int damage = 50;
+	public int eDamage = 30;
 
 	public void Seek(Transform _target)
 	{
@@ -46,6 +47,7 @@ public class Bullet : MonoBehaviour
 
 		if(explosionRadius > 0f)
         {
+			DamageFExplosion(target);
 			Explode();
         }
         else
@@ -63,7 +65,7 @@ public class Bullet : MonoBehaviour
         {
 			if(collider.tag == "Enemy")
             {
-				Damage(collider.transform);
+				explosionDamage(collider.transform);
             }
         }
 
@@ -79,6 +81,27 @@ public class Bullet : MonoBehaviour
 		}
 		
 		
+	}
+	
+	void DamageFExplosion(Transform enemy)
+    {
+		Enemy e = enemy.GetComponent<Enemy>();
+
+		if (e != null)
+		{
+			e.TakeDamage(damage - eDamage);
+		}
+	}
+
+	void explosionDamage (Transform enemy)
+    {
+		Enemy e = enemy.GetComponent<Enemy>();
+
+		if (e != null)
+		{
+			e.TakeDamage(eDamage);
+		}
+
 	}
 
 	void OnDrawGizmosSelected()

@@ -1,4 +1,4 @@
-
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -8,21 +8,27 @@ public class Enemy : MonoBehaviour
 
     [HideInInspector]
     public float speed;
-
     
-    public float health = 100;
+    
+    public float startHealth = 100;
+    public float health;
     public int value = 50;
 
+    [Header("Unity")]
+    public Image healthBar;
   
 
     void Start()
     {
+        health = startHealth;
         speed = startSpeed;
     }
 
     public void TakeDamage(float amount)
     {
         health -= amount;
+
+        healthBar.fillAmount = health / startHealth;
 
         if(health <= 0)
         {
