@@ -6600,9 +6600,14 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 1038346516710585266, guid: 6213b4e87eb57594f9470ebf8b4b5553, type: 3}
     count: 3
     rate: 0.8
+  - enemyPrefab: {fileID: 1038346516710585266, guid: 6213b4e87eb57594f9470ebf8b4b5553, type: 3}
+    count: 3
+    rate: 0.8
   spawnPoint: {fileID: 1373336820}
   waveCountdownText: {fileID: 474686792}
   timeBetweenWaves: 5
+  gameManager: {fileID: 780461988}
+  TESTE: 0
 --- !u!4 &780461985
 Transform:
   m_ObjectHideFlags: 0
@@ -6656,6 +6661,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 689654535}
+  nextLevel: Scene2
+  levelToUnlock: 2
 --- !u!114 &780461989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18500,6 +18507,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectT3
       objectReference: {fileID: 0}
+    - target: {fileID: 2894549666385476430, guid: 8a96c9e7c7955c441bcc94eefd6f4c46, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a96c9e7c7955c441bcc94eefd6f4c46, type: 3}
 --- !u!1001 &474152489295213677
@@ -18658,6 +18669,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopTurretItem
       objectReference: {fileID: 0}
+    - target: {fileID: 2336646625476466628, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
+      propertyPath: m_Text
+      value: $100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2336646625476466628, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2336646625476466628, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
 --- !u!1001 &1672866416507979262
@@ -18667,6 +18690,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1523098151}
     m_Modifications:
+    - target: {fileID: 6654363099562486953, guid: 658ad3d8202684b4f986e6e3d2c7b4f9, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8245691686432794564, guid: 658ad3d8202684b4f986e6e3d2c7b4f9, type: 3}
       propertyPath: m_Name
       value: ShopItem2
