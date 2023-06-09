@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5303215705247237449}
   m_Layer: 0
   m_Name: Missile Launcher
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,10 +47,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 10
   fireRate: 0.5
+  bulletPrefab: {fileID: 4579835442225806025, guid: cc8daf7fa7b9d63459333b663f99df25, type: 3}
+  useL: 0
+  damageOverT: 30
+  lineRenderer: {fileID: 0}
+  slowP: 0.5
   enemyTag: Enemy
   turnSpeed: 10
   partToRotate: {fileID: 6935471710614189082}
-  bulletPrefab: {fileID: 4579835442225806025, guid: cc8daf7fa7b9d63459333b663f99df25, type: 3}
   firePoint: {fileID: 6935471710614189082}
 --- !u!1 &232772989576575267
 GameObject:

@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: -338275039341002933}
   m_Layer: 0
   m_Name: T3
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,7 +243,9 @@ MonoBehaviour:
   fireRate: 1
   bulletPrefab: {fileID: 358726571137651929, guid: 638513bb05363fb4bb4f66c056f08fcc, type: 3}
   useL: 1
+  damageOverT: 30
   lineRenderer: {fileID: -338275039341002933}
+  slowP: 0.5
   enemyTag: Enemy
   turnSpeed: 10
   partToRotate: {fileID: 4087156152950734083}
