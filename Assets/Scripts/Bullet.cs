@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
 	public GameObject impactEffect;
 	public int damage = 50;
 	public int eDamage = 30;
+	public bool steal = false;
+	public int howMuch = 25;
 
 	public void Seek(Transform _target)
 	{
@@ -54,7 +56,11 @@ public class Bullet : MonoBehaviour
         {
 			Damage(target);
         }
+		if(steal)
+        {
+			PlayerStats.Money += howMuch;
 
+		}
 		Destroy(gameObject);
 	}
 

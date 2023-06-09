@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
     public TurretBlueprint anotherTurretPrefab;
     public TurretBlueprint tower3;
     public TurretBlueprint t4;
+    public TurretBlueprint tSteal;
 
    BuildManager buildManager;
 
@@ -36,6 +37,11 @@ public class Shop : MonoBehaviour
     public void SelectT4()
     {
         buildManager.SelectTurretToBuild(t4);
+    }
+
+    public void SelectSteal()
+    {
+        buildManager.SelectTurretToBuild(tSteal);
     }
 }
 
