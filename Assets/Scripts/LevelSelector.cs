@@ -9,8 +9,9 @@ public class LevelSelector : MonoBehaviour
 
     void Start()
     {
-      
-       int levelReached = PlayerPrefs.GetInt("levelReached", 1);
+       // PlayerPrefs.SetInt("levelReached", 1);
+
+        int levelReached = PlayerPrefs.GetInt("levelReached", 1);
  
 
         for (int i = 0; i < lButtons.Length; i++)

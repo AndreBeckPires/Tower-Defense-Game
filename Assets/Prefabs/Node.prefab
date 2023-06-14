@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4690e9a98e0c59c4180324189b32b644, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,6 +112,4 @@ MonoBehaviour:
   hoverColor: {r: 0.9843137, g: 1, b: 0, a: 1}
   noMoneyColor: {r: 1, g: 0, b: 0, a: 1}
   pOffset: {x: 0, y: 0.5, z: 0}
-  txtOBJ: {fileID: 4407980401752113149, guid: 77ee49838939a5f439c21095e7f993e0, type: 3}
-  TMPText: {fileID: 4407980401752113151, guid: 77ee49838939a5f439c21095e7f993e0, type: 3}
   turret: {fileID: 0}
