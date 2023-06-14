@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8260615937077497577
 Transform:
@@ -112,4 +112,6 @@ MonoBehaviour:
   hoverColor: {r: 0.9843137, g: 1, b: 0, a: 1}
   noMoneyColor: {r: 1, g: 0, b: 0, a: 1}
   pOffset: {x: 0, y: 0.5, z: 0}
+  txtOBJ: {fileID: 4407980401752113149, guid: 77ee49838939a5f439c21095e7f993e0, type: 3}
+  TMPText: {fileID: 4407980401752113151, guid: 77ee49838939a5f439c21095e7f993e0, type: 3}
   turret: {fileID: 0}

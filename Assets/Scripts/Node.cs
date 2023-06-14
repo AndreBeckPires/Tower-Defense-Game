@@ -1,12 +1,19 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.EventSystems;
+using TMPro;
+
+
+
 
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
     public Color noMoneyColor;
     public Vector3 pOffset;
+
+
 
     [Header("Optional")]
     public  GameObject turret;
@@ -42,6 +49,7 @@ public class Node : MonoBehaviour
             return;
         }
         buildManager.BuildTurretOn(this);
+      
     }
 
 

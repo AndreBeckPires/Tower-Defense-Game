@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
+
+    public GameObject creditPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,19 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+
+
+    public void showCredtis()
+    {
+        creditPanel.SetActive(true);
+    }
+
+    public void hideCredtis()
+    {
+        creditPanel.SetActive(false);
+    }
+
+
     public void quitGame()
     {
         Debug.Log("quit game");

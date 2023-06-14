@@ -327,6 +327,7 @@
 "Assets/Scripts/Gameover.cs"
 "Assets/Scripts/HoverOverText.cs"
 "Assets/Scripts/LevelSelector.cs"
+"Assets/Scripts/LIGHT TEXT.cs"
 "Assets/Scripts/LivesUI.cs"
 "Assets/Scripts/MainMenuScript.cs"
 "Assets/Scripts/MoneyUI.cs"

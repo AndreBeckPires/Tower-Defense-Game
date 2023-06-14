@@ -8,7 +8,8 @@ public class HoverOverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
      public GameObject HoverPanel;
      public TMP_Text TMPText;
-      public string HOVERTEXT;
+    [TextArea(3, 10)]
+    public string HOVERTEXT;
 
 
  
