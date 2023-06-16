@@ -1,9 +1,9 @@
-
+using TMPro;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-
+    public TMP_Text TMPText;
     public static BuildManager instance;
 
     void Awake()
@@ -45,5 +45,6 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         tToBuild = turret;
+        TMPText.text = "-$" + tToBuild.cost.ToString();
     }
 }

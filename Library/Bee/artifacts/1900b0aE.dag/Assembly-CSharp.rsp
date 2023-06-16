@@ -334,6 +334,7 @@
 "Assets/Scripts/Node.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerStats.cs"
+"Assets/Scripts/selfDestroyText.cs"
 "Assets/Scripts/Shop.cs"
 "Assets/Scripts/StartTutorial.cs"
 "Assets/Scripts/towerBuff.cs"

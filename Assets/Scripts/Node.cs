@@ -13,7 +13,7 @@ public class Node : MonoBehaviour
     public Color noMoneyColor;
     public Vector3 pOffset;
 
-
+    public GameObject goldText;
 
     [Header("Optional")]
     public  GameObject turret;
@@ -49,7 +49,7 @@ public class Node : MonoBehaviour
             return;
         }
         buildManager.BuildTurretOn(this);
-      
+        goldText.SetActive(true);
     }
 
 
