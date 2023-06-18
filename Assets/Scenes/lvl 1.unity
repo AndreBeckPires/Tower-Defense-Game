@@ -10196,6 +10196,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 495425396}
     - target: {fileID: 5942028176788413645, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 823709159}
+    - target: {fileID: 5942028176788413645, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: TMPText
       value: 
       objectReference: {fileID: 27691649}

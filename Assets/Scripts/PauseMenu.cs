@@ -7,9 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject ui;
+  
    void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             Toggle();
         }
@@ -17,13 +19,20 @@ public class PauseMenu : MonoBehaviour
 
     public void Toggle()
     {
-        ui.SetActive(!ui.activeSelf);
-       
+        if(ui.activeSelf)
+        {
+            ui.SetActive(false);
+        }
+        else
+        {
+            ui.SetActive(true);
+        }
+        
         if(ui.activeSelf)
         {
             Time.timeScale = 0f;
         }
-        else
+        if(!ui.activeSelf)
         {
             Time.timeScale = 1.0f;
         }

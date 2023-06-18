@@ -6,6 +6,7 @@ public class MainMenuScript : MonoBehaviour
 {
 
     public GameObject creditPanel;
+    public GameObject commandsPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,16 @@ public class MainMenuScript : MonoBehaviour
     public void hideCredtis()
     {
         creditPanel.SetActive(false);
+    }
+
+    public void showCommands()
+    {
+        commandsPanel.SetActive(true);
+    }
+
+    public void hideCommands()
+    {
+        commandsPanel.SetActive(false);
     }
 
 

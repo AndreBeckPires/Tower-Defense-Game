@@ -8,6 +8,7 @@ using TMPro;
 public class StartTutorial : MonoBehaviour
 {
     public GameObject ui;
+    public GameObject pause;
     public TMP_Text TMPText;
     [TextArea(3, 10)]
     public string HOVERTEXT;
@@ -25,11 +26,11 @@ public class StartTutorial : MonoBehaviour
 
     void Update()
     {
-        if (ui.activeSelf)
+        if (ui.activeSelf && !pause.activeSelf)
         {
             Time.timeScale = 0f;
         }
-        else
+        else if(!ui.activeSelf && !pause.activeSelf)
         {
             Time.timeScale = 1.0f;
         }
