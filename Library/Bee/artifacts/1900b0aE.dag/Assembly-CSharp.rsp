@@ -337,13 +337,13 @@
 "Assets/Scripts/selfDestroyText.cs"
 "Assets/Scripts/Shop.cs"
 "Assets/Scripts/StartTutorial.cs"
+"Assets/Scripts/timerController.cs"
 "Assets/Scripts/towerBuff.cs"
 "Assets/Scripts/Turret.cs"
 "Assets/Scripts/TurretBlueprint.cs"
 "Assets/Scripts/Wave.cs"
 "Assets/Scripts/WaveSpawner.cs"
 "Assets/Scripts/waypoints.cs"
-"Assets/timerController.cs"
 -langversion:8.0
 
 /deterministic

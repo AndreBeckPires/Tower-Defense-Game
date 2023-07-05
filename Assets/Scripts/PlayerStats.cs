@@ -11,14 +11,31 @@ public class PlayerStats : MonoBehaviour
     public int startLives = 20;
 
     public static int Rounds;
+
+    public GameObject audioS;
+    public AudioSource audioEndGame;
+    bool ended = false;
+
     void Start()
     {
+        audioS = GameObject.Find("dTakenAudio");
         Money = startMoney;
         Lives = startLives;
 
         Rounds = 0;
     }
 
-
+    void Update()
+    {
+        if (Lives <= 0 && ended == false)
+        {
+            audioEndGame.Play(0);
+            ended = true;
+        }
+        if(Lives < 0)
+        {
+            Destroy(audioS);
+        }
+    }
 
 }

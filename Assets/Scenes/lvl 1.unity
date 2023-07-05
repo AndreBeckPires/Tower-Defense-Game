@@ -10092,25 +10092,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5942028176788413632, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: nextLevel
-      value: lvl 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942028176788413632, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1686200669}
-    - target: {fileID: 5942028176788413632, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: levelToUnlock
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942028176788413633, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: startLives
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942028176788413633, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: startMoney
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413634, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: TMPText
       value: 
@@ -10123,22 +10107,6 @@ PrefabInstance:
       propertyPath: waveCountdownText
       value: 
       objectReference: {fileID: 1441310971}
-    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: waves.Array.data[0].rate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: waves.Array.data[1].rate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: waves.Array.data[2].rate
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: waves.Array.data[2].count
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413638, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: m_Name
       value: GameMaster
@@ -10203,12 +10171,6 @@ PrefabInstance:
       propertyPath: TMPText
       value: 
       objectReference: {fileID: 27691649}
-    - target: {fileID: 5942028176788413645, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
-      propertyPath: HOVERTEXT
-      value: "FASE 1:\nVOC\xCA TEM ACESSO A TORRE DOS DEVOTOS DE ZEUS, DEUS DO TROV\xC3O\nESSA
-        TORRE TEM COMO CARACTERISTICA POUCO TEMPO DE INTERVALO ENTRE OS ATAQUES\nCOMPRE
-        A TORRE CLICANDO NO \xCDCONE E CLIQUE NO MAPA ONDE DESEJA POSICIONAR "
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
 --- !u!1001 &1136325855
@@ -20483,3 +20445,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88744655d86b8d44ab7607f639dca40d, type: 3}
+--- !u!1001 &4569613440931894648
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 766365140529128627, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_Name
+      value: dTakenAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 59.585907
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.513855
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.826477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085088930637574955, guid: d92c260e589255543b3cef6469a72ed8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d92c260e589255543b3cef6469a72ed8, type: 3}

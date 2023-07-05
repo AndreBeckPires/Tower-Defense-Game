@@ -26,7 +26,7 @@ public class WaveSpawner : MonoBehaviour
     public GameManager gameManager;
 
     public int TESTE;
-
+    public AudioSource audioEndGame;
 
     void Start()
     {
@@ -53,6 +53,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (waveIndex == waves.Length && EnemiesAlive == 0)
         {
+            audioEndGame.Play(0);
             gameManager.WinLevel();
             this.enabled = false;
 

@@ -32,6 +32,7 @@ public class Turret : MonoBehaviour
 
     
     public Transform firePoint;
+    public AudioSource shootSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +65,7 @@ public class Turret : MonoBehaviour
         {
             if (fireCountDown <= 0f)
             {
+                shootSound.Play(0);
                 Shoot();
                 fireCountDown = 1 / fireRate;
             }

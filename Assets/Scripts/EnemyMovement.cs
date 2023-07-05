@@ -9,9 +9,14 @@ public class EnemyMovement : MonoBehaviour
     private Transform target;
     private int wavepointIndex = 0;
 
+    public GameObject audioS;
+    public AudioSource audio;
+
     private Enemy enemy;
     void Start()
     {
+        audioS = GameObject.Find("dTakenAudio");
+        audio = audioS.GetComponent<AudioSource>();
         enemy = GetComponent<Enemy>();
         target = waypoints.points[0];//seleciona o primeiro ponto como targe
     }
@@ -34,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (wavepointIndex >= waypoints.points.Length - 1)
         {
+            audio.Play(0);
             EndPath();
             return;
         }
