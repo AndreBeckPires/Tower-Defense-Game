@@ -7,6 +7,9 @@ public class MainMenuScript : MonoBehaviour
 
     public GameObject creditPanel;
     public GameObject commandsPanel;
+    public GameObject selectSavePanel;
+    public GameObject loadGameButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +19,16 @@ public class MainMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (PlayerPrefs.GetInt("levelReached", 1) == 1)
+        {
+            loadGameButton.SetActive(false);
+        }
     }
 
     public void goPlay()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        selectSavePanel.SetActive(true);
     }
 
 
@@ -50,5 +57,21 @@ public class MainMenuScript : MonoBehaviour
     {
         Debug.Log("quit game");
         Application.Quit();
+    }
+
+    public void newGame()
+    {
+        PlayerPrefs.SetInt("levelReached", 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void loadGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void backToMenu()
+    {
+        selectSavePanel.SetActive(false);
     }
 }

@@ -208,6 +208,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -324,6 +328,10 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -442,6 +450,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -559,6 +571,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -675,6 +691,10 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -845,7 +865,7 @@ ScriptsOnlyBuild:
     className: selfDestroyText
   - hash:
       serializedVersion: 2
-      Hash: bfa6e4052f73b20ef80c7cbf794eea72
+      Hash: 1caf25210359f7b412bfa84de8152ea8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BuildManager
@@ -1235,7 +1255,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 67fb65de74cac4c2f560ddd155f2b6e5
+      Hash: 0beee906a419745b6bea23127065391e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenuScript
@@ -1367,7 +1387,7 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
-      Hash: 3a79d14d0286bd5f5a1528b826e5a2be
+      Hash: ecec3e03525e6fa6f9325b7585b828a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerStats
@@ -1451,7 +1471,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 220ab582f73b70fd0cbc43ba8c4cc3d6
+      Hash: 8011ab8ca5eeae7a31d172cfbe3cfbd5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Turret
@@ -1529,7 +1549,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: d9fb2bbff374832e1ae890d64a4113e8
+      Hash: 020deee5660597f1de2d7809a98a954c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaveSpawner
@@ -1655,7 +1675,7 @@ ScriptsOnlyBuild:
     className: UnityOnToggleValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e3a6be25bd0a42c8d813f3fb6705efcc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyMovement
@@ -1686,4 +1706,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/lvl 3.unity
   - Assets/Scenes/lvl 4.unity
   - Assets/Scenes/lvl 5.unity
-  playerPath: "C:/Users/Andr\xE9/Desktop/new build test/Tower Defense.exe"
+  playerPath: C:/Users/dedehhhhhhh/Desktop/build test/Tower Defense.exe
