@@ -18,6 +18,8 @@ public class WaveSpawner : MonoBehaviour
 
     public Text waveCountdownText;
 
+    public Text waveCount;
+    public GameObject waveCountObjectWithTag;
     public float timeBetweenWaves;
     private float countdown = 2f;
 
@@ -31,11 +33,14 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         countdown = timeBetweenWaves;
+        waveCountObjectWithTag = GameObject.FindGameObjectWithTag("waveCountText");
+        waveCount = waveCountObjectWithTag.GetComponent<Text>();
     }
     void Update()
     {
 
-        if(EnemiesAlive > 0)
+       
+        if (EnemiesAlive > 0)
         {
             return;
         }
@@ -58,6 +63,7 @@ public class WaveSpawner : MonoBehaviour
             this.enabled = false;
 
         }
+        waveCount.text = (waves.Length - waveIndex).ToString();
     }
 
     IEnumerator spawnWave()//coroutine que pode ser pausada

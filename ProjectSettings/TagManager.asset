@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Tower
+  - waveCountText
   layers:
   - Default
   - TransparentFX

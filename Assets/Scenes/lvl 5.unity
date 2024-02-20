@@ -44366,7 +44366,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5942028176788413632, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: nextLevel
-      value: lvl 5
+      value: lvl 6
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413632, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: gameOverUI
@@ -44374,7 +44374,7 @@ PrefabInstance:
       objectReference: {fileID: 1398238187}
     - target: {fileID: 5942028176788413632, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: levelToUnlock
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413633, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: startMoney
