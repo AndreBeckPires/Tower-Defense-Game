@@ -141,4 +141,9 @@ public class Turret : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
+    public float getRange()
+    {
+        return range;
+    }
 }

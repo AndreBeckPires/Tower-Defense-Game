@@ -57,5 +57,10 @@ public class BuildManager : MonoBehaviour
         TMPText.text = "-$" + tToBuild.cost.ToString();
     }
 
+    public float getRange()
+    {
+        return tToBuild.prefab.GetComponent<Turret>().getRange();
+    }
+
    
 }

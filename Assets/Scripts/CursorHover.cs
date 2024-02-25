@@ -8,12 +8,16 @@ public class CursorHover : MonoBehaviour
     public GameObject shop;
     public Color corPossivel;
     public Color corImpossivel;
-
-
+    public float range = 30f;
+    public GameObject showRange;
+    public GameObject shownRange;
+    public Material novoMaterial;
     BuildManager buildManager;
-
+  
     void Start() 
     {
+
+      
         buildManager = BuildManager.instance;
         shop = GameObject.Find("Shop");
      
@@ -21,31 +25,32 @@ public class CursorHover : MonoBehaviour
     }
     void Update()
     {
-        if (buildManager.HasMoney())
-        {
-            Material novoMaterial = new Material(objetoASpawnar.GetComponent<Renderer>().sharedMaterial);
-            novoMaterial.color = corPossivel;
-            objetoASpawnar.GetComponent<Renderer>().sharedMaterial = novoMaterial;
-        }
-        else
-        {
-            Material novoMaterial = new Material(objetoASpawnar.GetComponent<Renderer>().sharedMaterial);
-            novoMaterial.color = corImpossivel;
-            objetoASpawnar.GetComponent<Renderer>().sharedMaterial = novoMaterial;
-        }
-
-
     }
 
     void OnMouseEnter()
     {
 
-     
+      
+
+        showRange.transform.localScale = new Vector3(buildManager.getRange() * 2f, 1f, buildManager.getRange() * 2f);
+        Debug.Log(showRange.transform.localScale);
+        if (buildManager.HasMoney())
+        {
+            novoMaterial = objetoASpawnar.GetComponent<Renderer>().sharedMaterial;
+            novoMaterial.color = corPossivel;
+            objetoASpawnar.GetComponent<Renderer>().sharedMaterial = novoMaterial;
+        }
+        else
+        {
+           novoMaterial = objetoASpawnar.GetComponent<Renderer>().sharedMaterial;
+            novoMaterial.color = corImpossivel;
+            objetoASpawnar.GetComponent<Renderer>().sharedMaterial = novoMaterial;
+        }
 
         if (shop.GetComponent<Shop>().getComprou())
         {
             // Este método é chamado quando o mouse entra no objeto
-            Debug.Log("Mouse entrou no objeto: " + gameObject.name);
+           
             Vector3 posicaoReferencia = transform.position;
 
             // Adiciona um offset à posição de referência se desejado (opcional)
@@ -54,6 +59,7 @@ public class CursorHover : MonoBehaviour
 
             // Spawna o objeto na posição de referência
             objetoSpawnado = Instantiate(objetoASpawnar, posicaoReferencia, Quaternion.identity);
+            shownRange = Instantiate(showRange, posicaoReferencia, Quaternion.identity);
         }
 
     }
@@ -61,10 +67,11 @@ public class CursorHover : MonoBehaviour
     void OnMouseExit()
     {
         // Este método é chamado quando o mouse sai do objeto
-        Debug.Log("Mouse saiu do objeto: " + gameObject.name);
+       
         if (objetoSpawnado != null)
         {
             Destroy(objetoSpawnado);
+           Destroy(shownRange);
         }
     }
 

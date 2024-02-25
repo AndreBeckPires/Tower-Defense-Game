@@ -127,8 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e650507a67fea1146ba936d85176f355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoASpawnar: {fileID: 3683163358951256747, guid: 7973a90b98921eb40a1a2e9ff990cb41, type: 3}
+  objetoASpawnar: {fileID: 7416979804165175706, guid: e81272c19b0b34a4f8d0921ce2f07b90, type: 3}
   objetoSpawnado: {fileID: 0}
   shop: {fileID: 0}
   corPossivel: {r: 0, g: 1, b: 0, a: 1}
   corImpossivel: {r: 1, g: 0, b: 0, a: 1}
+  range: 5
+  showRange: {fileID: 3764755529958481293, guid: b70bb7f93107f0d4086378c00f306114, type: 3}
