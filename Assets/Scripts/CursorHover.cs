@@ -6,18 +6,42 @@ public class CursorHover : MonoBehaviour
     public GameObject objetoASpawnar;
     public GameObject objetoSpawnado;
     public GameObject shop;
+    public Color corPossivel;
+    public Color corImpossivel;
+
+
+    BuildManager buildManager;
 
     void Start() 
     {
+        buildManager = BuildManager.instance;
         shop = GameObject.Find("Shop");
+     
+      
     }
     void Update()
     {
+        if (buildManager.HasMoney())
+        {
+            Material novoMaterial = new Material(objetoASpawnar.GetComponent<Renderer>().sharedMaterial);
+            novoMaterial.color = corPossivel;
+            objetoASpawnar.GetComponent<Renderer>().sharedMaterial = novoMaterial;
+        }
+        else
+        {
+            Material novoMaterial = new Material(objetoASpawnar.GetComponent<Renderer>().sharedMaterial);
+            novoMaterial.color = corImpossivel;
+            objetoASpawnar.GetComponent<Renderer>().sharedMaterial = novoMaterial;
+        }
+
 
     }
 
     void OnMouseEnter()
     {
+
+     
+
         if (shop.GetComponent<Shop>().getComprou())
         {
             // Este método é chamado quando o mouse entra no objeto

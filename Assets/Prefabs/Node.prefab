@@ -128,3 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetoASpawnar: {fileID: 3683163358951256747, guid: 7973a90b98921eb40a1a2e9ff990cb41, type: 3}
+  objetoSpawnado: {fileID: 0}
+  shop: {fileID: 0}
+  corPossivel: {r: 0, g: 1, b: 0, a: 1}
+  corImpossivel: {r: 1, g: 0, b: 0, a: 1}

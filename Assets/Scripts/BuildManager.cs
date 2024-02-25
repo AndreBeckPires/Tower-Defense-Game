@@ -28,9 +28,9 @@ public class BuildManager : MonoBehaviour
     public bool CanBuild { 
         get { return tToBuild != null; }
     }
-    public bool HasMoney
+    public bool HasMoney()
     {
-        get { return PlayerStats.Money >= tToBuild.cost; }
+         return PlayerStats.Money >= tToBuild.cost;
     }
     public void BuildTurretOn(Node node)
     {
@@ -56,4 +56,6 @@ public class BuildManager : MonoBehaviour
         tToBuild = turret;
         TMPText.text = "-$" + tToBuild.cost.ToString();
     }
+
+   
 }

@@ -60,5 +60,6 @@ public class Shop : MonoBehaviour
     {
         comprado = false;
     }
+    
 }
 

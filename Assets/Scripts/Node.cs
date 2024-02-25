@@ -64,13 +64,6 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        if(buildManager.HasMoney)
-        {
-            rend.material.color = hoverColor;
-        }else
-        {
-            rend.material.color = noMoneyColor;
-        }
        
     }
     
