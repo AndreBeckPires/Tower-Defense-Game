@@ -6,11 +6,12 @@ public class BuildManager : MonoBehaviour
     public TMP_Text TMPText;
     public static BuildManager instance;
     public AudioSource buildTower;
-
+    public GameObject shop;
 
     void Awake()
     {
-        if(instance != null)
+        shop = GameObject.Find("Shop");
+        if (instance != null)
         {
             Debug.LogError("More than one build manager in scene");
             return;
@@ -33,17 +34,22 @@ public class BuildManager : MonoBehaviour
     }
     public void BuildTurretOn(Node node)
     {
-        if(PlayerStats.Money < tToBuild.cost)
+        if(shop.GetComponent<Shop>().getComprou())
         {
-            Debug.Log("poor");
-            return;
+            if (PlayerStats.Money < tToBuild.cost)
+            {
+                Debug.Log("poor");
+                return;
+            }
+
+            PlayerStats.Money -= tToBuild.cost;
+            GameObject turret = (GameObject)Instantiate(tToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+            buildTower.Play(0);
+            node.turret = turret;
+            shop.GetComponent<Shop>().setMontado();
+            Debug.Log("Money left " + PlayerStats.Money);
         }
 
-        PlayerStats.Money -= tToBuild.cost;
-        GameObject turret = (GameObject)Instantiate(tToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        buildTower.Play(0);
-        node.turret = turret;
-        Debug.Log("Money left " + PlayerStats.Money);
     }
     public void SelectTurretToBuild(TurretBlueprint turret)
     {

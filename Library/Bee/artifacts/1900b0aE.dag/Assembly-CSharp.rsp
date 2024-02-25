@@ -321,6 +321,7 @@
 "Assets/Scripts/BuildManager.cs"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CameraController.cs"
+"Assets/Scripts/CursorHover.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/EnemyMovement.cs"
 "Assets/Scripts/GameManager.cs"
