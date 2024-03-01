@@ -11,10 +11,11 @@ public class EnemyMovement : MonoBehaviour
 
     public GameObject audioS;
     public AudioSource audio;
-
+    public bool canMoove;
     private Enemy enemy;
     void Start()
     {
+        canMoove = true;
         audioS = GameObject.Find("dTakenAudio");
         audio = audioS.GetComponent<AudioSource>();
         enemy = GetComponent<Enemy>();
@@ -24,15 +25,21 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);//faz a movimentação em direção ao targe
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.2f)
+        canMoove = this.GetComponent<Enemy>().canMoove;
+        if(canMoove)
         {
-            GetNextWaypoint();//seleciona o proximo lista quando chega ao targe
+            Vector3 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);//faz a movimentação em direção ao targe
+
+            if (Vector3.Distance(transform.position, target.position) <= 0.2f)
+            {
+                GetNextWaypoint();//seleciona o proximo lista quando chega ao targe
+            }
+
+            enemy.speed = enemy.startSpeed;
         }
 
-        enemy.speed = enemy.startSpeed;
     }
 
     void GetNextWaypoint()

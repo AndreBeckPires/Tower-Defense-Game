@@ -14,12 +14,17 @@ public class Enemy : MonoBehaviour
     public float health;
     public int value = 50;
 
+    public GameObject text;
     [Header("Unity")]
     public Image healthBar;
-  
+    public GameObject healhBG;
+   
 
+    public bool canMoove;
     void Start()
     {
+        canMoove = true;
+        text.SetActive(false);
         health = startHealth;
         speed = startSpeed;
     }
@@ -43,11 +48,21 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        canMoove = false;
         PlayerStats.Money += value;
-        Destroy(gameObject);
+       
+        text.SetActive(true);
+        healhBG.SetActive(false);
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        Invoke("DestroyObject", 0.5f);
+        // Destroy(gameObject);
 
         WaveSpawner.EnemiesAlive--;
     }
 
-
+    void DestroyObject()
+    {
+        
+        Destroy(gameObject);
+    }
 }

@@ -118,6 +118,7 @@ MonoBehaviour:
   health: 0
   value: 60
   healthBar: {fileID: 7171658902723257011}
+  uiGoldReceived: {fileID: 666460640008533458, guid: 805a4214987f54d4c91b53832a070cf1, type: 3}
 --- !u!114 &-8851411997051611782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e3edd2c36b7d8049b29fcd857770921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTookDamage: {fileID: -1816220081444213072}
+  audioS: {fileID: 0}
+  audio: {fileID: 0}
 --- !u!82 &-1816220081444213072
 AudioSource:
   m_ObjectHideFlags: 0
