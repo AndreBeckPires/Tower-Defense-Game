@@ -16,10 +16,10 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
+
     public Text waveCountdownText;
 
-    public Text waveCount;
-    public GameObject waveCountObjectWithTag;
+
     public float timeBetweenWaves;
     private float countdown = 2f;
 
@@ -30,15 +30,18 @@ public class WaveSpawner : MonoBehaviour
     public int TESTE;
     public AudioSource audioEndGame;
 
+    public bool isActive;
+    public Text nWaveText;
     void Start()
     {
         countdown = timeBetweenWaves;
-        waveCountObjectWithTag = GameObject.FindGameObjectWithTag("waveCountText");
-        waveCount = waveCountObjectWithTag.GetComponent<Text>();
+      
+        nWaveText.gameObject.SetActive(true);
+        updateWaveCounter();
     }
     void Update()
     {
-
+        isActive = nWaveText.gameObject.activeSelf;
        
         if (EnemiesAlive > 0)
         {
@@ -46,6 +49,7 @@ public class WaveSpawner : MonoBehaviour
         }
         if(countdown <= 0f)
         {
+            updateWaveCounter();
             StartCoroutine(spawnWave());
             countdown = timeBetweenWaves; //depois de triggar a primeira começa o "loop" de waves
             return;
@@ -63,7 +67,7 @@ public class WaveSpawner : MonoBehaviour
             this.enabled = false;
 
         }
-        waveCount.text = (waves.Length - waveIndex).ToString();
+        
     }
 
     IEnumerator spawnWave()//coroutine que pode ser pausada
@@ -89,5 +93,10 @@ public class WaveSpawner : MonoBehaviour
     {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);//spawn method
       
+    }
+
+    void updateWaveCounter()
+    {
+        nWaveText.text = (waves.Length - waveIndex).ToString();
     }
 }

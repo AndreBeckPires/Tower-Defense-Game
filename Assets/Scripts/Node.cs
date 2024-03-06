@@ -9,8 +9,7 @@ using TMPro;
 
 public class Node : MonoBehaviour
 {
-    public Color hoverColor;
-    public Color noMoneyColor;
+  
     public Vector3 pOffset;
 
     public GameObject goldText;
@@ -19,13 +18,13 @@ public class Node : MonoBehaviour
     public  GameObject turret;
 
     private Renderer rend;
-    private Color sColor;
+
 
     BuildManager buildManager;
     void Start()
     {
         rend = GetComponent<Renderer>();
-        sColor = rend.material.color;
+       
         buildManager = BuildManager.instance;
     }
 
@@ -53,22 +52,7 @@ public class Node : MonoBehaviour
     }
 
 
-    void OnMouseEnter()
-    {
-
-        if(EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-        if (!buildManager.CanBuild)
-        {
-            return;
-        }
-       
-    }
+ 
     
-    void OnMouseExit()
-    {
-        rend.material.color = sColor;
-    }
+ 
 }

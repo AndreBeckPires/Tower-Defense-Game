@@ -33,7 +33,7 @@ public class CursorHover : MonoBehaviour
       
 
         showRange.transform.localScale = new Vector3(buildManager.getRange() * 2f, 1f, buildManager.getRange() * 2f);
-        Debug.Log(showRange.transform.localScale);
+     
         if (buildManager.HasMoney())
         {
             novoMaterial = objetoASpawnar.GetComponent<Renderer>().sharedMaterial;
