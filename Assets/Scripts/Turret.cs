@@ -30,7 +30,11 @@ public class Turret : MonoBehaviour
     public float turnSpeed = 10f;
     public Transform partToRotate;
 
-    
+    [Header("Spawna Algo")]
+    public bool spawn_something = false;
+    public GameObject[] ways;
+    public GameObject closestWay;
+
     public Transform firePoint;
     public AudioSource shootSound;
     // Start is called before the first frame update
@@ -43,38 +47,74 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(target == null)
+        if (!spawn_something)
         {
-            if(useL)
+            if (target == null)
             {
-                if(lineRenderer.enabled)
+                if (useL)
                 {
-                    lineRenderer.enabled = false;
+                    if (lineRenderer.enabled)
+                    {
+                        lineRenderer.enabled = false;
+                    }
                 }
+
+                return;//se nao tiver target nao faz nada
             }
 
-            return;//se nao tiver target nao faz nada
+            
+
+            if (useL)
+            {
+                LaserShoot();
+            }
+            else
+            {
+                if (fireCountDown <= 0f)
+                {
+                    shootSound.Play(0);
+                    Shoot();
+                    fireCountDown = 1 / fireRate;
+                }
+
+                fireCountDown -= Time.deltaTime;
+
+            }
         }
 
+        else if (spawn_something)
+        {
+            ways = GameObject.FindGameObjectsWithTag("way");
+            EncontrarObjetoMaisProximo();
+        }
         LockOnTarget();
 
-        if(useL)
-        {
-            LaserShoot();
-        }else
-        {
-            if (fireCountDown <= 0f)
-            {
-                shootSound.Play(0);
-                Shoot();
-                fireCountDown = 1 / fireRate;
-            }
-
-            fireCountDown -= Time.deltaTime;
-
-        }
-
     }
+
+    void EncontrarObjetoMaisProximo()
+    {
+        if(ways.Length > 0 )
+        {
+            closestWay = ways[0];
+            float distanciaMaisProxima = Vector3.Distance(transform.position, closestWay.transform.position);
+
+            // Iterar sobre os objetos encontrados
+            foreach (GameObject way in ways)
+            {
+                // Calcule a distância entre o objeto atual e o objeto iterado
+                float distanciaAtual = Vector3.Distance(transform.position, way.transform.position);
+
+                // Verifique se o objeto iterado está mais próximo
+                if (distanciaAtual < distanciaMaisProxima)
+                {
+                    distanciaMaisProxima = distanciaAtual;
+                    closestWay = way;
+                    target = closestWay.transform;
+                }
+            }
+        }
+    }
+    
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
