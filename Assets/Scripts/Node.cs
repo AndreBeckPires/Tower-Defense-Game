@@ -19,13 +19,15 @@ public class Node : MonoBehaviour
 
     private Renderer rend;
 
-
     BuildManager buildManager;
+
+
     void Start()
     {
         rend = GetComponent<Renderer>();
        
         buildManager = BuildManager.instance;
+
     }
 
     public Vector3 GetBuildPosition()
@@ -47,8 +49,10 @@ public class Node : MonoBehaviour
             Debug.Log("Can't build there!");
             return;
         }
+
+      
+    
         buildManager.BuildTurretOn(this);
-        goldText.SetActive(true);
     }
 
 

@@ -10878,6 +10878,10 @@ PrefabInstance:
       propertyPath: TMPText
       value: 
       objectReference: {fileID: 1984291191}
+    - target: {fileID: 5942028176788413634, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: goldUsed
+      value: 
+      objectReference: {fileID: 1984291192}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: spawnPoint
       value: 
@@ -23720,6 +23724,7 @@ MonoBehaviour:
   tSteal:
     prefab: {fileID: 2790079048584714787, guid: afd1269e9068e8b469a4332736c50f2d, type: 3}
     cost: 380
+  comprado: 0
 --- !u!114 &1296756953
 MonoBehaviour:
   m_ObjectHideFlags: 0

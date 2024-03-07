@@ -423,20 +423,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 82b9ffff66cdffff9ed9ffff56fbffff
+      m_SelectedIDs: 70f4ffff
+      m_LastClickedID: -2960
+      m_ExpandedIDs: 56fbffff3e5700004a5900007e5900003c5a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: GameMaster
-        m_OriginalName: GameMaster
+        m_Name: Waypoints
+        m_OriginalName: Waypoints
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -19812
+        m_UserData: 21348
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -485,9 +485,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 271.5, y: 141, z: 0}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 271.5, y: 141, z: 0}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -538,9 +538,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 865.9349
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 865.9349
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -558,7 +558,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.12435028, y: 0.5255138, z: -0.077977985, w: -0.838026}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -685,7 +685,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 76}
     m_SelectedIDs: 9a5e0000
     m_LastClickedID: 24218
-    m_ExpandedIDs: 000000005a5a00005c5a00005e5a0000605a000000ca9a3b
+    m_ExpandedIDs: 000000000a5f00000c5f00000e5f0000105f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -713,7 +713,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a5a00005c5a00005e5a0000605a0000
+    m_ExpandedIDs: 000000000a5f00000c5f00000e5f0000105f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -821,7 +821,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -19812
+  m_LastSelectedObjectID: -2960
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

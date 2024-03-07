@@ -7,7 +7,7 @@ public class BuildManager : MonoBehaviour
     public static BuildManager instance;
     public AudioSource buildTower;
     public GameObject shop;
-
+    public GameObject goldUsed;
     void Awake()
     {
         shop = GameObject.Find("Shop");
@@ -47,7 +47,7 @@ public class BuildManager : MonoBehaviour
             buildTower.Play(0);
             node.turret = turret;
             shop.GetComponent<Shop>().setMontado();
-            Debug.Log("Money left " + PlayerStats.Money);
+            goldUsed.SetActive(true);
         }
 
     }
