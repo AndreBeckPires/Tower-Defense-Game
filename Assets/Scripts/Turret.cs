@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    private Transform target;
+    public Transform target;
     private Enemy targetEnemy;
 
     [Header("GENERAL")]//muda de uma torre para outra
@@ -32,8 +32,8 @@ public class Turret : MonoBehaviour
 
     [Header("Spawna Algo")]
     public bool spawn_something = false;
-    public GameObject[] ways;
     public GameObject closestWay;
+    public GameObject barreira;
 
     public Transform firePoint;
     public AudioSource shootSound;
@@ -84,64 +84,84 @@ public class Turret : MonoBehaviour
 
         else if (spawn_something)
         {
-            ways = GameObject.FindGameObjectsWithTag("way");
-            EncontrarObjetoMaisProximo();
+
+            EncontrarObjetoProximo();
         }
         LockOnTarget();
 
     }
 
-    void EncontrarObjetoMaisProximo()
+
+    void EncontrarObjetoProximo()
     {
-        if(ways.Length > 0 )
+        GameObject[] listaDeObjetos = GameObject.FindGameObjectsWithTag("way");
+
+        GameObject objetoMaisProximo = null;
+        float menorDistancia = Mathf.Infinity;
+
+        foreach (GameObject objeto in listaDeObjetos)
         {
-            closestWay = ways[0];
-            float distanciaMaisProxima = Vector3.Distance(transform.position, closestWay.transform.position);
-
-            // Iterar sobre os objetos encontrados
-            foreach (GameObject way in ways)
+            if (objeto != null)
             {
-                // Calcule a distância entre o objeto atual e o objeto iterado
-                float distanciaAtual = Vector3.Distance(transform.position, way.transform.position);
+                MeshFilter meshFilter = objeto.GetComponent<MeshFilter>();
 
-                // Verifique se o objeto iterado está mais próximo
-                if (distanciaAtual < distanciaMaisProxima)
+                if (meshFilter != null && meshFilter.mesh != null)
                 {
-                    distanciaMaisProxima = distanciaAtual;
-                    closestWay = way;
-                    target = closestWay.transform;
+                    Vector3 centroDoMesh = objeto.transform.TransformPoint(meshFilter.mesh.bounds.center);
+                    float distancia = Vector3.Distance(this.transform.position, centroDoMesh);
+
+                    if (distancia < menorDistancia && distancia < range)
+                    {
+                        menorDistancia = distancia;
+                        objetoMaisProximo = objeto;
+                    }
                 }
             }
         }
-    }
-    
-    void UpdateTarget()
-    {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemey = null;
-        foreach(GameObject enemy in enemies)
+
+        if (objetoMaisProximo != null)
         {
-            if(enemy.GetComponent<Enemy>().canMoove == true)
-            {
-                float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-                if (distanceToEnemy < shortestDistance)
-                {
-                    shortestDistance = distanceToEnemy;
-                    nearestEnemey = enemy;
-                }
-            }
-    
-        }
-        if(nearestEnemey != null && shortestDistance <= range)
-        {
-            target = nearestEnemey.transform;
-            targetEnemy = nearestEnemey.GetComponent<Enemy>();
+            target = objetoMaisProximo.transform;
         }
         else
         {
-            target = null;
+            Debug.LogWarning("Nenhum objeto válido encontrado na lista.");
         }
+    }
+
+
+
+    void UpdateTarget()
+    {
+        if(!spawn_something)
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+            float shortestDistance = Mathf.Infinity;
+            GameObject nearestEnemey = null;
+            foreach (GameObject enemy in enemies)
+            {
+                if (enemy.GetComponent<Enemy>().canMoove == true)
+                {
+                    float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+                    if (distanceToEnemy < shortestDistance)
+                    {
+                        shortestDistance = distanceToEnemy;
+                        nearestEnemey = enemy;
+                    }
+                }
+
+            }
+            if (nearestEnemey != null && shortestDistance <= range)
+            {
+                target = nearestEnemey.transform;
+                targetEnemy = nearestEnemey.GetComponent<Enemy>();
+            }
+            else
+            {
+                target = null;
+            }
+        }
+
     }
 
  
@@ -161,11 +181,13 @@ public class Turret : MonoBehaviour
     }
     void LockOnTarget()
     {
+       
+            Vector3 dir = target.position - transform.position;
+            Quaternion lookRotation = Quaternion.LookRotation(dir);
+            Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+            partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
-        Vector3 dir = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
     }
     void Shoot()
     {
@@ -190,4 +212,12 @@ public class Turret : MonoBehaviour
     {
         return range;
     }
+
+
+    void spawnBarreira()
+    {
+        Vector3 spawnPosition = target.transform.position + new Vector3(0, target.transform.localScale.y / 2 + barreira.transform.localScale.y / 2, 0);
+        GameObject novoObjeto = Instantiate(barreira, spawnPosition, Quaternion.identity);
+    }
 }
+

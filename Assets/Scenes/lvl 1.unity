@@ -10175,6 +10175,10 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1686200669}
+    - target: {fileID: 5942028176788413633, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: startMoney
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413634, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: TMPText
       value: 
@@ -18719,6 +18723,9 @@ MonoBehaviour:
   tSteal:
     prefab: {fileID: 2790079048584714787, guid: afd1269e9068e8b469a4332736c50f2d, type: 3}
     cost: 380
+  blockTower:
+    prefab: {fileID: 0}
+    cost: 0
   comprado: 0
 --- !u!114 &1987317400
 MonoBehaviour:

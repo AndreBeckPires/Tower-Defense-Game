@@ -232,17 +232,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemyPrefab: {fileID: 1038346516710585266, guid: 0b490f2e55c49374a94ce84936bf708d, type: 3}
-    count: 2
+    count: 10
     rate: 1
   - enemyPrefab: {fileID: 1038346516710585266, guid: 6213b4e87eb57594f9470ebf8b4b5553, type: 3}
-    count: 3
-    rate: 0.5
+    count: 10
+    rate: 0.2
   - enemyPrefab: {fileID: 1038346516710585266, guid: 6213b4e87eb57594f9470ebf8b4b5553, type: 3}
     count: 3
     rate: 0.3
+  - enemyPrefab: {fileID: 1038346516710585266, guid: 2c3ad0de157204b4790aaa04b94dbea6, type: 3}
+    count: 5
+    rate: 0.8
+  - enemyPrefab: {fileID: 1038346516710585266, guid: 2c3ad0de157204b4790aaa04b94dbea6, type: 3}
+    count: 9
+    rate: 0.8
+  - enemyPrefab: {fileID: 1038346516710585266, guid: 0b490f2e55c49374a94ce84936bf708d, type: 3}
+    count: 15
+    rate: 0.5
+  - enemyPrefab: {fileID: 1038346516710585266, guid: 2c3ad0de157204b4790aaa04b94dbea6, type: 3}
+    count: 15
+    rate: 0.5
+  - enemyPrefab: {fileID: 1038346516710585266, guid: 2c3ad0de157204b4790aaa04b94dbea6, type: 3}
+    count: 8
+    rate: 0.2
+  - enemyPrefab: {fileID: 1038346516710585266, guid: 0b490f2e55c49374a94ce84936bf708d, type: 3}
+    count: 8
+    rate: 0.2
   spawnPoint: {fileID: 0}
   waveCountdownText: {fileID: 0}
-  waveCountObjectWithTag: {fileID: 0}
   timeBetweenWaves: 5
   gameManager: {fileID: 5942028176788413632}
   TESTE: 0
@@ -264,6 +281,7 @@ MonoBehaviour:
   TMPText: {fileID: 0}
   buildTower: {fileID: 934808021}
   shop: {fileID: 2477909862789238740}
+  goldUsed: {fileID: 0}
 --- !u!114 &5942028176788413633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd186db8b6bae9c468dd05611a438486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 200
+  startMoney: 300
   startLives: 2
   audioS: {fileID: 0}
   audioEndGame: {fileID: -1948056288224002166}
@@ -293,8 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 0}
-  nextLevel: lvl 2
-  levelToUnlock: 2
+  nextLevel: lvl 5
+  levelToUnlock: 5
 --- !u!114 &5942028176788413639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,9 +341,8 @@ MonoBehaviour:
   ui: {fileID: 0}
   pause: {fileID: 0}
   TMPText: {fileID: 0}
-  HOVERTEXT: "FASE 1:\nVOC\xCA TEM ACESSO A TORRE DOS DEVOTOS DE ZEUS, DEUS DO TROV\xC3O\nESSA
-    TORRE TEM COMO CARACTERISTICA POUCO TEMPO DE INTERVALO ENTRE OS ATAQUES\nCOMPRE
-    A TORRE CLICANDO NO \xCDCONE E CLIQUE NO MAPA ONDE DESEJA POSICIONAR "
+  HOVERTEXT: "FASE 5:\nHERMES, DEUS DA RIQUEZA\nSEUS ATAQUES ADICIONAR\xC3O MAIS
+    DINHEIRO AOS SEUS RECURSOS"
 --- !u!82 &934808021
 AudioSource:
   m_ObjectHideFlags: 0
