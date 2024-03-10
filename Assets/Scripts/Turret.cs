@@ -33,10 +33,13 @@ public class Turret : MonoBehaviour
     [Header("Spawna Algo")]
     public bool spawn_something = false;
     public GameObject closestWay;
-    public GameObject barreira;
-
+    public GameObject[] barreira;
+    public bool jaSpawnou = false;
     public Transform firePoint;
     public AudioSource shootSound;
+    public bool spawnedObjectisAlive;
+    public GameObject spawnObject;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -76,16 +79,37 @@ public class Turret : MonoBehaviour
                     Shoot();
                     fireCountDown = 1 / fireRate;
                 }
-
+        
                 fireCountDown -= Time.deltaTime;
+
 
             }
         }
 
-        else if (spawn_something)
+        else if (spawn_something && spawnObject == null)
         {
-
             EncontrarObjetoProximo();
+            getSAlive(ref spawnObject);
+            if (spawnedObjectisAlive == false)
+            {
+                if (fireCountDown <= 0f)
+                {
+                   
+                    spawnBarreira();
+                   
+                }
+
+                if (jaSpawnou == false)
+                    fireCountDown -= Time.deltaTime;
+                else
+                {
+                    fireCountDown = 3f;
+                }
+
+
+
+            }
+
         }
         LockOnTarget();
 
@@ -119,9 +143,10 @@ public class Turret : MonoBehaviour
             }
         }
 
-        if (objetoMaisProximo != null)
+        if (objetoMaisProximo != null && spawnedObjectisAlive == false)
         {
             target = objetoMaisProximo.transform;
+          
         }
         else
         {
@@ -216,8 +241,34 @@ public class Turret : MonoBehaviour
 
     void spawnBarreira()
     {
-        Vector3 spawnPosition = target.transform.position + new Vector3(0, target.transform.localScale.y / 2 + barreira.transform.localScale.y / 2, 0);
-        GameObject novoObjeto = Instantiate(barreira, spawnPosition, Quaternion.identity);
+        if (!jaSpawnou && spawnedObjectisAlive == false)
+        {
+
+            jaSpawnou = true;
+            int i = Random.Range(0, barreira.Length);
+            Quaternion rotacaoSpawnador = transform.rotation;
+            Vector3 spawnPosition = target.transform.position + new Vector3(0, target.transform.localScale.y / 2 + barreira[i].transform.localScale.y / 2, 0);
+            GameObject objetoSpawnaddo = Instantiate(barreira[i], spawnPosition, rotacaoSpawnador);
+            spawnObject = objetoSpawnaddo;
+
+        }
+       
     }
+
+    void getSAlive(ref GameObject objeto)
+    {
+        if (objeto != null)
+            spawnedObjectisAlive = true;
+        else {
+            spawnedObjectisAlive = false;
+            jaSpawnou = false;
+        }
+    }
+
+    void ChangeSpawnou()
+    {
+        jaSpawnou = false;
+    }
+
 }
 

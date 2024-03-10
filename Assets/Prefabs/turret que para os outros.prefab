@@ -16,9 +16,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8481503130256276329, guid: fb30414db9bcf824b9074ff23644e596, type: 3}
     - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
+      propertyPath: fireRate
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
       propertyPath: spawn_something
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
+      propertyPath: barreira.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
+      propertyPath: barreira.Array.data[0]
+      value: 
+      objectReference: {fileID: 8481503130256276329, guid: 658188a6cdecb6640b303d5dea63c46f, type: 3}
+    - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
+      propertyPath: barreira.Array.data[1]
+      value: 
+      objectReference: {fileID: 8481503130256276329, guid: 6b034b62d6a6d7d47a301fefbed16314, type: 3}
+    - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
+      propertyPath: barreira.Array.data[2]
+      value: 
+      objectReference: {fileID: 8481503130256276329, guid: a148b48984bc2a1409bb83eef1dd39c9, type: 3}
+    - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
+      propertyPath: barreira.Array.data[3]
+      value: 
+      objectReference: {fileID: 8481503130256276329, guid: fb30414db9bcf824b9074ff23644e596, type: 3}
     - target: {fileID: 2790079048584714787, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
       propertyPath: m_Name
       value: turret que para os outros
