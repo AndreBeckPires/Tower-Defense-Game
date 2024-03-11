@@ -13,6 +13,9 @@ public class EnemyMovement : MonoBehaviour
     public AudioSource audio;
     public bool canMoove;
     private Enemy enemy;
+    public bool stopped;
+    public float thisSpeed;
+
     void Start()
     {
         canMoove = true;
@@ -20,12 +23,14 @@ public class EnemyMovement : MonoBehaviour
         audio = audioS.GetComponent<AudioSource>();
         enemy = GetComponent<Enemy>();
         target = waypoints.points[0];//seleciona o primeiro ponto como targe
+        thisSpeed = enemy.startSpeed;
     }
 
 
     void Update()
     {
 
+        
         canMoove = this.GetComponent<Enemy>().canMoove;
         if(canMoove)
         {
@@ -39,7 +44,11 @@ public class EnemyMovement : MonoBehaviour
 
             enemy.speed = enemy.startSpeed;
         }
-
+        if (enemy.startSpeed <= 0 && stopped == true)
+        {
+            stopped = false;
+            Invoke("changeSpeed", 3f);
+        }
     }
 
     void GetNextWaypoint()
@@ -61,4 +70,8 @@ public class EnemyMovement : MonoBehaviour
         Destroy(gameObject);//se chegou no ponto final destroi o objeto
     }
 
+    void changeSpeed()
+    {
+        enemy.startSpeed = thisSpeed;
+    }
 }
