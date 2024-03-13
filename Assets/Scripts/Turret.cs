@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Turret : MonoBehaviour
 {
@@ -39,7 +40,10 @@ public class Turret : MonoBehaviour
     public AudioSource shootSound;
     public bool spawnedObjectisAlive;
     public GameObject spawnObject;
-   
+
+
+    public Image[] vidasCounter;
+    public int vidasNUM;
     // Start is called before the first frame update
     void Start()
     {
@@ -112,6 +116,10 @@ public class Turret : MonoBehaviour
 
         }
         LockOnTarget();
+
+
+        checkVidas();
+
 
     }
 
@@ -270,5 +278,23 @@ public class Turret : MonoBehaviour
         jaSpawnou = false;
     }
 
+
+    void checkVidas()
+    {
+        if(vidasNUM == 2)
+        {
+            vidasCounter[0].gameObject.SetActive(true);
+            vidasCounter[1].gameObject.SetActive(true);
+        }
+        if (vidasNUM == 1)
+        {
+            vidasCounter[0].gameObject.SetActive(true);
+            vidasCounter[1].gameObject.SetActive(false);
+        }
+        if(vidasNUM !=2 && vidasNUM != 1)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
 

@@ -29067,6 +29067,10 @@ MonoBehaviour:
   tSteal:
     prefab: {fileID: 2790079048584714787, guid: afd1269e9068e8b469a4332736c50f2d, type: 3}
     cost: 380
+  blockTower:
+    prefab: {fileID: 0}
+    cost: 0
+  comprado: 0
 --- !u!114 &1229430429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35204,8 +35208,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472423595}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 4.7}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: -4.8}
+  m_LocalScale: {x: 0.1, y: 0.06714877, z: 0.1}
   m_Children:
   - {fileID: 1742601126}
   m_Father: {fileID: 0}
@@ -35213,7 +35217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50.6, y: -0}
+  m_AnchoredPosition: {x: 50.6, y: 0}
   m_SizeDelta: {x: 1332.6814, y: 343.5432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1472660041
