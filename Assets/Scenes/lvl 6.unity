@@ -52894,7 +52894,7 @@ PrefabInstance:
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[0].enemyPrefab
       value: 
-      objectReference: {fileID: 1038346516710585266, guid: 92a4f19a09525714f94fcfd9f7e437d0, type: 3}
+      objectReference: {fileID: 1038346516710585266, guid: 886baefb5998aa4469805bd4ffb5d07e, type: 3}
     - target: {fileID: 5942028176788413638, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: m_Name
       value: GameMaster

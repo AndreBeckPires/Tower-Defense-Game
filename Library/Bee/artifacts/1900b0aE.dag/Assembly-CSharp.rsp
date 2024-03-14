@@ -324,6 +324,7 @@
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/CursorHover.cs"
 "Assets/Scripts/Enemy.cs"
+"Assets/Scripts/EnemyDamageToTower.cs"
 "Assets/Scripts/EnemyMovement.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Gameover.cs"

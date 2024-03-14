@@ -7,6 +7,7 @@ public class towerBuff : MonoBehaviour
 
     public GameObject[] towers;
     public int towersSize;
+    public float range = 15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,12 @@ public class towerBuff : MonoBehaviour
         if (towers.Length > towersSize)
         {
             for (int i = towersSize; i < towers.Length; i++){
-                towers[i].GetComponent<Turret>().fireRate += 0.2f;
+                float distancia = Vector3.Distance(this.transform.position, towers[i].transform.position);
+                if(distancia < range)
+                {
+                    towers[i].GetComponent<Turret>().fireRate += 0.2f;
+                }
+               
             }
             towersSize = towers.Length;
         }
