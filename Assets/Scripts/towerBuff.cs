@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class towerBuff : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class towerBuff : MonoBehaviour
     public GameObject[] towers;
     public int towersSize;
     public float range = 15f;
+
+    public Image[] vidasCounter;
+    public int vidasNUM;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +22,7 @@ public class towerBuff : MonoBehaviour
         {
             tower.GetComponent<Turret>().fireRate += 0.2f;
         }
-
+        vidasNUM = 2;
     }
 
     // Update is called once per frame
@@ -37,5 +41,25 @@ public class towerBuff : MonoBehaviour
             }
             towersSize = towers.Length;
         }
+        checkVidas();
     }
+    void checkVidas()
+    {
+        if (vidasNUM == 2)
+        {
+            vidasCounter[0].gameObject.SetActive(true);
+            vidasCounter[1].gameObject.SetActive(true);
+        }
+        if (vidasNUM == 1)
+        {
+            vidasCounter[0].gameObject.SetActive(true);
+            vidasCounter[1].gameObject.SetActive(false);
+        }
+        if (vidasNUM != 2 && vidasNUM != 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 }

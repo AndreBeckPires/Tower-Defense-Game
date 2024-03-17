@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject ui;
-  
+    public GameObject GameMaster;
    void Update()
     {
 
@@ -42,7 +42,24 @@ public class PauseMenu : MonoBehaviour
     public void Retry()
     {
         Toggle();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Tower");
+
+        foreach (GameObject obj in objectsWithTag)
+        {
+            // Do something with obj
+            Destroy(obj);
+        }
+        GameObject[] objectsWithTag2 = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject obj in objectsWithTag2)
+        {
+            // Do something with obj
+            Destroy(obj);
+        }
+
+        GameMaster.GetComponent<PlayerStats>().reset();
+        GameMaster.GetComponent<WaveSpawner>().reset();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Menu()

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4071796139991918283}
   - component: {fileID: 8576867718114478602}
   - component: {fileID: 1563053640672876005}
+  - component: {fileID: 1120177260912856798}
   m_Layer: 0
   m_Name: Missile Launcher
   m_TagString: Tower
@@ -180,8 +181,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 43.57346, y: 5.451235, z: 41.7127}
-  m_Center: {x: -5.76457, y: 2.2256174, z: -2.330284}
+  m_Size: {x: 7.1844044, y: 5.451235, z: 35.232983}
+  m_Center: {x: -2.5960464, y: 2.2256174, z: 0.90958273}
 --- !u!54 &1563053640672876005
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -198,6 +199,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &1120177260912856798
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202508144261195316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 31.984268, y: 5.6159763, z: 1}
+  m_Center: {x: -0.5264425, y: 2.3079863, z: 0}
 --- !u!1 &3758766236829601880
 GameObject:
   m_ObjectHideFlags: 0

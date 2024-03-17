@@ -32,8 +32,11 @@ public class WaveSpawner : MonoBehaviour
 
     public bool isActive;
     public Text nWaveText;
-    void Start()
+
+    public int currentWaveCount;
+    void Awake()
     {
+        timeBetweenWaves = 5f;
         countdown = timeBetweenWaves;
       
         nWaveText.gameObject.SetActive(true);
@@ -67,6 +70,7 @@ public class WaveSpawner : MonoBehaviour
             this.enabled = false;
 
         }
+
         
     }
 
@@ -98,5 +102,16 @@ public class WaveSpawner : MonoBehaviour
     void updateWaveCounter()
     {
         nWaveText.text = (waves.Length - waveIndex).ToString();
+    }
+
+    public void reset()
+    {
+        waveIndex = 0;
+        timeBetweenWaves = 5f;
+        countdown = timeBetweenWaves;
+        EnemiesAlive = 0;
+        nWaveText.gameObject.SetActive(true);
+        updateWaveCounter();
+        StopCoroutine(spawnWave());
     }
 }

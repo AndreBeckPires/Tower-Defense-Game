@@ -38,4 +38,13 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void reset()
+    {
+        audioS = GameObject.Find("dTakenAudio");
+        Money = startMoney;
+        Lives = startLives;
+        ended = false;
+        Rounds = 0;
+
+    }
 }
