@@ -15,6 +15,8 @@ public class EnemyMovement : MonoBehaviour
     private Enemy enemy;
     public bool stopped;
     public float thisSpeed;
+    public Transform partToRotate;
+
 
     void Start()
     {
@@ -29,8 +31,8 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        LockOnTarget();
 
-        
         canMoove = this.GetComponent<Enemy>().canMoove;
         if(canMoove)
         {
@@ -39,6 +41,7 @@ public class EnemyMovement : MonoBehaviour
 
             if (Vector3.Distance(transform.position, target.position) <= 0.2f)
             {
+               
                 GetNextWaypoint();//seleciona o proximo lista quando chega ao targe
             }
 
@@ -61,6 +64,8 @@ public class EnemyMovement : MonoBehaviour
         }
         wavepointIndex++;
         target = waypoints.points[wavepointIndex];//seleciona o proximo
+        
+
     }
 
     void EndPath()
@@ -73,5 +78,16 @@ public class EnemyMovement : MonoBehaviour
     void changeSpeed()
     {
         enemy.startSpeed = thisSpeed;
+    }
+
+    void LockOnTarget()
+    {
+
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * 10).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+
     }
 }

@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     [Header("Unity")]
     public Image healthBar;
     public GameObject healhBG;
+    public GameObject meshbody;
 
 
     public bool jaRendeu;
@@ -63,6 +64,7 @@ public class Enemy : MonoBehaviour
         text.SetActive(true);
         healhBG.SetActive(false);
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        Destroy(meshbody);
         Invoke("DestroyObject", 0.5f);
        
         // Destroy(gameObject);
