@@ -36,7 +36,7 @@ public class Gameover : MonoBehaviour
         gameMaster.GetComponent<PlayerStats>().reset();
         gameMaster.GetComponent<GameManager>().reset();
         gameMaster.GetComponent<WaveSpawner>().reset();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Menu()
     {

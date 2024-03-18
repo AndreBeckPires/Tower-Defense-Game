@@ -33,6 +33,8 @@ public class WaveSpawner : MonoBehaviour
     public bool isActive;
     public Text nWaveText;
 
+
+    public bool stopSpawnWave = false;
     public int currentWaveCount;
     void Awake()
     {
@@ -53,6 +55,7 @@ public class WaveSpawner : MonoBehaviour
         if(countdown <= 0f)
         {
             updateWaveCounter();
+            stopSpawnWave = false;
             StartCoroutine(spawnWave());
             countdown = timeBetweenWaves; //depois de triggar a primeira começa o "loop" de waves
             return;
@@ -84,6 +87,13 @@ public class WaveSpawner : MonoBehaviour
         EnemiesAlive = wave.count;
         for (int i = 0; i < wave.count; i++)
         {
+            if (stopSpawnWave)
+            {
+                waveIndex = 0;
+                yield break; // Interrompe imediatamente se stopSpawnWave for true
+            }
+
+
             spawnEnemy(wave.enemyPrefab);
             yield return new WaitForSeconds(wave.rate);//spawnna um, espera e spawna o proximo da wave
         }
@@ -107,11 +117,15 @@ public class WaveSpawner : MonoBehaviour
     public void reset()
     {
         waveIndex = 0;
+        stopSpawnWave = true;
+        StopCoroutine(spawnWave());
         timeBetweenWaves = 5f;
         countdown = timeBetweenWaves;
         EnemiesAlive = 0;
         nWaveText.gameObject.SetActive(true);
         updateWaveCounter();
+        
         StopCoroutine(spawnWave());
-    }
+     
+}
 }

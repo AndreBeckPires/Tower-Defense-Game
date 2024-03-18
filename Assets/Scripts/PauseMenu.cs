@@ -59,11 +59,14 @@ public class PauseMenu : MonoBehaviour
 
         GameMaster.GetComponent<PlayerStats>().reset();
         GameMaster.GetComponent<WaveSpawner>().reset();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+     
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Menu()
     {
+        GameMaster.GetComponent<PlayerStats>().reset();
+        GameMaster.GetComponent<WaveSpawner>().reset();
         SceneManager.LoadScene(0);
     }
     
