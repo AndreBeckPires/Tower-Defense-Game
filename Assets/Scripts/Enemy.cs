@@ -18,13 +18,14 @@ public class Enemy : MonoBehaviour
     [Header("Unity")]
     public Image healthBar;
     public GameObject healhBG;
-   
 
+
+    public bool jaRendeu;
     public bool canMoove;
     void Start()
     {
-       
-        canMoove = true;
+        jaRendeu = false;
+         canMoove = true;
         text.SetActive(false);
         health = startHealth;
         speed = startSpeed;
@@ -52,7 +53,12 @@ public class Enemy : MonoBehaviour
     {
       
         canMoove = false;
-        PlayerStats.Money += value;
+        if(!jaRendeu)
+        {
+            PlayerStats.Money += value;
+            jaRendeu = true;
+        }
+     
         
         text.SetActive(true);
         healhBG.SetActive(false);
