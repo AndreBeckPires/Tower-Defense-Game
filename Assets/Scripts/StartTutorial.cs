@@ -10,6 +10,7 @@ public class StartTutorial : MonoBehaviour
     public GameObject ui;
     public GameObject pause;
     public TMP_Text TMPText;
+    public GameObject listaUI;
     [TextArea(3, 10)]
     public string HOVERTEXT;
     // Start is called before the first frame update

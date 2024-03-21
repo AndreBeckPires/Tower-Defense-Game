@@ -7,7 +7,10 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject ui;
+    public GameObject listaDeInimigos;
     public GameObject GameMaster;
+    public GameObject[] botoes;
+    public bool listaOpen = false;
    void Update()
     {
 
@@ -27,8 +30,9 @@ public class PauseMenu : MonoBehaviour
         {
             ui.SetActive(true);
         }
-        
-        if(ui.activeSelf)
+
+
+        if (ui.activeSelf)
         {
             Time.timeScale = 0f;
         }
@@ -36,6 +40,8 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
+       
+        
 
     }
 
@@ -68,6 +74,29 @@ public class PauseMenu : MonoBehaviour
         GameMaster.GetComponent<PlayerStats>().reset();
         GameMaster.GetComponent<WaveSpawner>().reset();
         SceneManager.LoadScene(0);
+    }
+
+
+    public void ListaDeInimigos()
+    {
+        listaDeInimigos.SetActive(true);
+        foreach(GameObject botao in botoes)
+        {
+            botao.SetActive(false);
+        }
+        Toggle();
+       
+        
+        
+    }
+    public void CloseListaDeInimigos()
+    {
+        foreach (GameObject botao in botoes)
+        {
+            botao.SetActive(true);
+        }
+        listaDeInimigos.SetActive(false);
+        Toggle();
     }
     
     public void quitGame()

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static bool gameOver;
     public GameObject gameOverUI;
 
+
     public string nextLevel = "Scene2";
     public int levelToUnlock = 2;
 
