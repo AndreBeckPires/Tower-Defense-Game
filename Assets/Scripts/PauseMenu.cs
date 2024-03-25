@@ -16,6 +16,10 @@ public class PauseMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
+            foreach (GameObject botao in botoes)
+            {
+                botao.SetActive(true);
+            }
             Toggle();
         }
     }

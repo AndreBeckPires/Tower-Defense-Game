@@ -12,6 +12,8 @@ public class Shop : MonoBehaviour
     public TurretBlueprint t4;
     public TurretBlueprint tSteal;
     public TurretBlueprint blockTower;
+    public TurretBlueprint ares;
+
     public bool comprado = false;
 
 
@@ -55,6 +57,13 @@ public class Shop : MonoBehaviour
     {
         buildManager.SelectTurretToBuild(blockTower);
         comprado = true;
+    }
+
+    public void SelectAres()
+    {
+        buildManager.SelectTurretToBuild(ares);
+        comprado = true;
+
     }
     public bool getComprou()
     {

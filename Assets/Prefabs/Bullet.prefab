@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7955913417563605323}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,3 +100,5 @@ MonoBehaviour:
   impactEffect: {fileID: 7130168804349527864, guid: 503fbc78dff80814688542ca7c588bfc, type: 3}
   damage: 50
   eDamage: 30
+  steal: 0
+  howMuch: 25

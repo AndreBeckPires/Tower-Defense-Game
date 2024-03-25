@@ -8,6 +8,7 @@ TagManager:
   - Tower
   - waveCountText
   - way
+  - Bullet
   layers:
   - Default
   - TransparentFX
