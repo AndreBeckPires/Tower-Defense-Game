@@ -63,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
 
         countdown -= Time.deltaTime;
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-        waveCountdownText.text = Mathf.Round(countdown).ToString();//corta decimais
+        waveCountdownText.text = "Proxima onda: " +  Mathf.Round(countdown).ToString();//corta decimais
 
 
         if (waveIndex == waves.Length && EnemiesAlive == 0)
@@ -111,7 +111,7 @@ public class WaveSpawner : MonoBehaviour
 
     void updateWaveCounter()
     {
-        nWaveText.text = (waves.Length - waveIndex).ToString();
+        nWaveText.text = "Ondas: " + (waves.Length - waveIndex).ToString();
     }
 
     public void reset()
