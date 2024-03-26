@@ -15,18 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/lvl 1.unity
     guid: 529971aaeec9a7141bdbb0be096e1e4d
   - enabled: 1
-    path: Assets/Scenes/lvl 2.unity
+    path: Assets/Scenes/scenas deletadas/lvl 2.unity
     guid: 3daebb7d47ce67c42973ca7cc6206da0
   - enabled: 1
-    path: Assets/Scenes/lvl 3.unity
+    path: Assets/Scenes/scenas deletadas/lvl 3.unity
     guid: 82374ada9aa83b74a97a5a725545f022
   - enabled: 1
-    path: Assets/Scenes/lvl 4.unity
+    path: Assets/Scenes/scenas deletadas/lvl 4.unity
     guid: 2dc3870d656440941bfbbc9256eb8926
   - enabled: 1
-    path: Assets/Scenes/lvl 5.unity
+    path: Assets/Scenes/scenas deletadas/lvl 5.unity
     guid: 1d1e4382d212ada41adab5aa9a4e6616
   - enabled: 1
-    path: Assets/Scenes/lvl 6.unity
+    path: Assets/Scenes/scenas deletadas/lvl 6.unity
     guid: 20c9ae0dc2f079d498e5dd5420821b10
   m_configObjects: {}
