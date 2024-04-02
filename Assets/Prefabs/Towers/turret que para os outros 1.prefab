@@ -452,6 +452,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
+      propertyPath: fallEfect
+      value: 
+      objectReference: {fileID: 1206760262941470298, guid: ee7ae250628fee6439661890ffa8b839, type: 3}
+    - target: {fileID: 125219066, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
       propertyPath: spawn_something
       value: 1
       objectReference: {fileID: 0}

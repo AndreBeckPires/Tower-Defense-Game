@@ -12,13 +12,18 @@ public class towerBuff : MonoBehaviour
 
     public Image[] vidasCounter;
     public int vidasNUM;
+
+    public AudioSource towerFall;
+    public GameObject fallEfect;
+
     // Start is called before the first frame update
     void Start()
     {
         towers = GameObject.FindGameObjectsWithTag("Tower");
         towersSize = towers.Length;
+        towerFall = GameObject.FindWithTag("towerFall").GetComponent<AudioSource>();
 
-        foreach(GameObject tower in towers)
+        foreach (GameObject tower in towers)
         {
             tower.GetComponent<Turret>().fireRate += 0.2f;
         }
@@ -57,6 +62,8 @@ public class towerBuff : MonoBehaviour
         }
         if (vidasNUM != 2 && vidasNUM != 1)
         {
+            Instantiate(fallEfect, transform.position + Vector3.up * 5.0f, transform.rotation);
+            towerFall.Play(0);
             Destroy(gameObject);
         }
     }

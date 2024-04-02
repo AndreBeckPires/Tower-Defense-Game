@@ -41,6 +41,8 @@ public class Turret : MonoBehaviour
     public bool spawnedObjectisAlive;
     public GameObject spawnObject;
 
+    public AudioSource towerFall;
+    public GameObject fallEfect;
 
     public Image[] vidasCounter;
     public int vidasNUM;
@@ -48,7 +50,8 @@ public class Turret : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);//chamando com pausa
-        
+        towerFall = GameObject.FindWithTag("towerFall").GetComponent<AudioSource>();
+       
     }
 
     // Update is called once per frame
@@ -293,7 +296,10 @@ public class Turret : MonoBehaviour
         }
         if(vidasNUM !=2 && vidasNUM != 1)
         {
+            Instantiate(fallEfect, transform.position + Vector3.up * 5.0f, transform.rotation);
+            towerFall.Play(0);
             Destroy(gameObject);
+
         }
     }
 }

@@ -11,17 +11,19 @@ public class aresBuff : MonoBehaviour
 
     public Image[] vidasCounter;
     public int vidasNUM;
+
+    public GameObject fallEfect;
     // Start is called before the first frame update
     void Start()
     {
         bullets = GameObject.FindGameObjectsWithTag("Bullet");
         bulletsSize = bullets.Length;
-
+        vidasNUM = 2;
         foreach (GameObject bullet in bullets)
         {
             bullet.GetComponent<Bullet>().damage += 10;
         }
-        vidasNUM = 2;
+  
     }
 
     // Update is called once per frame
@@ -57,6 +59,8 @@ public class aresBuff : MonoBehaviour
         }
         if (vidasNUM != 2 && vidasNUM != 1)
         {
+
+            Instantiate(fallEfect, transform.position + Vector3.up * 5.0f, transform.rotation);
             Destroy(gameObject);
         }
     }

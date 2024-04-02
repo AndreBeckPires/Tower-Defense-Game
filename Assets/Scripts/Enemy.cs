@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
 
     public bool jaRendeu;
     public bool canMoove;
+
+    public GameObject destroyEffect;
     void Start()
     {
         jaRendeu = false;
@@ -65,6 +67,7 @@ public class Enemy : MonoBehaviour
         healhBG.SetActive(false);
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
         Destroy(meshbody);
+        Instantiate(destroyEffect, transform.position + Vector3.up * 2.0f, transform.rotation);
         Invoke("DestroyObject", 0.5f);
        
         // Destroy(gameObject);
@@ -74,7 +77,7 @@ public class Enemy : MonoBehaviour
 
     void DestroyObject()
     {
-        
+       
         Destroy(gameObject);
     }
 }

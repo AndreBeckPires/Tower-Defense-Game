@@ -123,6 +123,7 @@ MonoBehaviour:
   meshbody: {fileID: 6607096299157805213}
   jaRendeu: 0
   canMoove: 0
+  destroyEffect: {fileID: 1206760262941470298, guid: 1362eff1515a0f24ebb12a04ecc322d1, type: 3}
 --- !u!114 &-8851411997051611782
 MonoBehaviour:
   m_ObjectHideFlags: 0

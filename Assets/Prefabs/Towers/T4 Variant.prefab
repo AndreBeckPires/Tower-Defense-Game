@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers: []
+  towersSize: 0
+  range: 15
+  vidasCounter: []
+  vidasNUM: 0
+  towerFall: {fileID: 0}
 --- !u!1001 &2273996021280576432
 PrefabInstance:
   m_ObjectHideFlags: 0

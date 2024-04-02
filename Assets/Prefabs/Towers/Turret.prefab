@@ -69,6 +69,8 @@ MonoBehaviour:
   shootSound: {fileID: -2654456638566351261}
   spawnedObjectisAlive: 0
   spawnObject: {fileID: 0}
+  towerFall: {fileID: 0}
+  fallEfect: {fileID: 1206760262941470298, guid: ee7ae250628fee6439661890ffa8b839, type: 3}
   vidasCounter:
   - {fileID: 1167507912244650196}
   - {fileID: 6633911296897257551}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDamageToTower : MonoBehaviour
 {
     public Turret script;
+    public towerBuff scriptT;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +26,22 @@ public class EnemyDamageToTower : MonoBehaviour
             // Faça algo quando houver colisão com o objeto desejado
             Debug.Log("Colisão com o objeto desejado!");
             script = collision.gameObject.GetComponent<Turret>();
-            if(script != null && script.enabled)
+            scriptT= collision.gameObject.GetComponent<towerBuff>();
+            if (script != null && script.enabled)
             {
                 collision.gameObject.GetComponent<Turret>().vidasNUM -= 1;
             }
-            else
+            else if((scriptT != null && scriptT.enabled))
             {
                 collision.gameObject.GetComponent<towerBuff>().vidasNUM -= 1;
+               
             }
+            else
+            {
+                collision.gameObject.GetComponent<aresBuff>().vidasNUM -= 1;
+            }
+
+
          
         }
     }
