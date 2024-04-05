@@ -7,6 +7,7 @@ public class ShowNextEnemy : MonoBehaviour
 {
     public Sprite minotaur;
     public Sprite centaur;
+    public Sprite dragon;
     Image imagem;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,10 @@ public class ShowNextEnemy : MonoBehaviour
         if (i == 1)
         {
             imagem.sprite = centaur;
+        }
+        if (i == 2)
+        {
+            imagem.sprite = dragon;
         }
     }
 }

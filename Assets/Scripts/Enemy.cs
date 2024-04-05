@@ -49,7 +49,10 @@ public class Enemy : MonoBehaviour
 
     public void Slow (float amount)
     {
-        speed = startSpeed * (1f - amount);
+
+            speed = startSpeed * (1f - amount);
+
+       
     }
 
     void Die()
@@ -60,6 +63,7 @@ public class Enemy : MonoBehaviour
         {
             PlayerStats.Money += value;
             jaRendeu = true;
+            WaveSpawner.EnemiesAlive--;
         }
      
         
@@ -71,8 +75,8 @@ public class Enemy : MonoBehaviour
         Invoke("DestroyObject", 0.5f);
        
         // Destroy(gameObject);
-
-        WaveSpawner.EnemiesAlive--;
+      
+      
     }
 
     void DestroyObject()

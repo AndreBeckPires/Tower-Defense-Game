@@ -55,7 +55,7 @@ public class WaveSpawner : MonoBehaviour
         {
             return;
         }
-        if(countdown <= 0f)
+        if(countdown <= 0f && EnemiesAlive <= 0)
         {
            
             updateWaveCounter();
@@ -149,6 +149,10 @@ public class WaveSpawner : MonoBehaviour
             if (nomePrefab == "Enemy 2")
             {
                 nextEnemy.GetComponent<ShowNextEnemy>().changeImage(1);
+            }
+            if (nomePrefab == "Enemy 4")
+            {
+                nextEnemy.GetComponent<ShowNextEnemy>().changeImage(2);
             }
         }
     }
