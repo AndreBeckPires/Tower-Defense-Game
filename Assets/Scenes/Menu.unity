@@ -2314,9 +2314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MOVE CAMERA - W,A,S,D
-
-    ZOOM CONTROL - MOUSE SCROLL'
+  m_Text: "Movimento de c\xE2mera - W, A, S, D\nZOOM - MOUSE SCROLL\n"
 --- !u!222 &1099717053
 CanvasRenderer:
   m_ObjectHideFlags: 0

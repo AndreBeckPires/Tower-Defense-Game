@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 22
   speed: 10
-  startHealth: 50
+  startHealth: 75
   health: 0
   value: 50
   text: {fileID: 7369428622241355008}

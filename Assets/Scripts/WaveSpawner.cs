@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class WaveSpawner : MonoBehaviour
 {
 
-
+    public GameObject nextEnemy;
 
     public static int EnemiesAlive = 0;
 
@@ -36,6 +36,8 @@ public class WaveSpawner : MonoBehaviour
 
     public bool stopSpawnWave = false;
     public int currentWaveCount;
+
+    string nomePrefab;
     void Awake()
     {
         timeBetweenWaves = 5f;
@@ -48,16 +50,19 @@ public class WaveSpawner : MonoBehaviour
     {
         isActive = nWaveText.gameObject.activeSelf;
        
+     
         if (EnemiesAlive > 0)
         {
             return;
         }
         if(countdown <= 0f)
         {
+           
             updateWaveCounter();
             stopSpawnWave = false;
             StartCoroutine(spawnWave());
             countdown = timeBetweenWaves; //depois de triggar a primeira começa o "loop" de waves
+            updateNextEnemy();
             return;
         }
 
@@ -128,4 +133,23 @@ public class WaveSpawner : MonoBehaviour
         StopCoroutine(spawnWave());
      
 }
+
+    void updateNextEnemy()
+    {
+
+        {
+            if (waveIndex + 1 < waves.Length)
+            {
+                nomePrefab = waves[waveIndex + 1].enemyPrefab.name;
+            }
+            if (nomePrefab == "Enemy")
+            {
+                nextEnemy.GetComponent<ShowNextEnemy>().changeImage(0);
+            }
+            if (nomePrefab == "Enemy 2")
+            {
+                nextEnemy.GetComponent<ShowNextEnemy>().changeImage(1);
+            }
+        }
+    }
 }
