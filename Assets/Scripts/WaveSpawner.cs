@@ -154,6 +154,10 @@ public class WaveSpawner : MonoBehaviour
             {
                 nextEnemy.GetComponent<ShowNextEnemy>().changeImage(2);
             }
+            if(nomePrefab == "Enemy 3")
+            {
+                nextEnemy.GetComponent<ShowNextEnemy>().changeImage(3);
+            }
         }
     }
 }
