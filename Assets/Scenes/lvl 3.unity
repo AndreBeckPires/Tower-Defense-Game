@@ -18593,6 +18593,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 394825283}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1136255995}
+    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: nextEnemy
       value: 
       objectReference: {fileID: 968269524}
@@ -18640,6 +18644,18 @@ PrefabInstance:
       propertyPath: waves.Array.data[3].count
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: waveCounterIcons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: waveCounterIcons.Array.data[0]
+      value: 
+      objectReference: {fileID: 5298081488868302506, guid: dea333c7bebcce1488a5e8144519250e, type: 3}
+    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: waveCounterIcons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1136255994}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[0].enemyPrefab
       value: 
@@ -18811,6 +18827,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+--- !u!1 &1136255994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7347691191508255078, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+  m_PrefabInstance: {fileID: 1136255993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1136255995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3383137864698755600, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+  m_PrefabInstance: {fileID: 1136255993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1146706316
 PrefabInstance:
   m_ObjectHideFlags: 0

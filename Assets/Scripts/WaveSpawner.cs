@@ -2,11 +2,14 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 
 
 public class WaveSpawner : MonoBehaviour
 {
+
+    public List<GameObject> gameObjectList = new List<GameObject>();
 
     public GameObject nextEnemy;
 
@@ -16,6 +19,9 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
+    public GameObject[] waveCounterIcons;
+    public GameObject canvas;
+    public float distanceIcons = 36;
 
     public Text waveCountdownText;
 
@@ -45,7 +51,17 @@ public class WaveSpawner : MonoBehaviour
       
         nWaveText.gameObject.SetActive(true);
         updateWaveCounter();
+        for(int i =0; i < waves.Length; i++)
+        {
+            GameObject newObject = InstantiateAndAdd(waveCounterIcons[0]);
+
+
+            distanceIcons += 36f;
+        }
+        Destroy(waveCounterIcons[1]);
     }
+
+
     void Update()
     {
         isActive = nWaveText.gameObject.activeSelf;
@@ -117,6 +133,7 @@ public class WaveSpawner : MonoBehaviour
     void updateWaveCounter()
     {
         nWaveText.text = "Ondas: " + (waves.Length - waveIndex).ToString();
+        DestroyLast();
     }
 
     public void reset()
@@ -158,6 +175,37 @@ public class WaveSpawner : MonoBehaviour
             {
                 nextEnemy.GetComponent<ShowNextEnemy>().changeImage(3);
             }
+        }
+    }
+
+    GameObject InstantiateAndAdd(GameObject prefab)
+    {
+        // Instancia o prefab
+        GameObject newObj = Instantiate(prefab, new Vector3(waveCounterIcons[1].transform.position.x + distanceIcons, waveCounterIcons[1].transform.position.y, waveCounterIcons[1].transform.position.z), Quaternion.identity, canvas.transform);
+
+        // Adiciona o novo objeto à lista
+        gameObjectList.Add(newObj);
+
+        return newObj;
+    }
+
+    void DestroyLast()
+    {
+        // Verifica se há pelo menos um objeto na lista
+        if (gameObjectList.Count > 0)
+        {
+            // Pega o último objeto da lista
+            GameObject lastObject = gameObjectList[gameObjectList.Count - 1];
+
+            // Remove o último objeto da lista
+            gameObjectList.RemoveAt(gameObjectList.Count - 1);
+
+            // Destroi o último objeto
+            Destroy(lastObject);
+        }
+        else
+        {
+            Debug.LogWarning("A lista está vazia. Não há objetos para destruir.");
         }
     }
 }
