@@ -37,7 +37,7 @@ public class WaveSpawner : MonoBehaviour
     public AudioSource audioEndGame;
 
     public bool isActive;
-    public Text nWaveText;
+    //public Text nWaveText;
 
 
     public bool stopSpawnWave = false;
@@ -49,7 +49,7 @@ public class WaveSpawner : MonoBehaviour
         timeBetweenWaves = 5f;
         countdown = timeBetweenWaves;
       
-        nWaveText.gameObject.SetActive(true);
+       // nWaveText.gameObject.SetActive(true);
         updateWaveCounter();
         for(int i =0; i < waves.Length; i++)
         {
@@ -64,7 +64,7 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        isActive = nWaveText.gameObject.activeSelf;
+        //isActive = nWaveText.gameObject.activeSelf;
        
      
         if (EnemiesAlive > 0)
@@ -132,7 +132,7 @@ public class WaveSpawner : MonoBehaviour
 
     void updateWaveCounter()
     {
-        nWaveText.text = "Ondas: " + (waves.Length - waveIndex).ToString();
+      //  nWaveText.text = "Ondas: " + (waves.Length - waveIndex).ToString();
         DestroyLast();
     }
 
@@ -144,7 +144,7 @@ public class WaveSpawner : MonoBehaviour
         timeBetweenWaves = 5f;
         countdown = timeBetweenWaves;
         EnemiesAlive = 0;
-        nWaveText.gameObject.SetActive(true);
+        //nWaveText.gameObject.SetActive(true);
         updateWaveCounter();
         
         StopCoroutine(spawnWave());

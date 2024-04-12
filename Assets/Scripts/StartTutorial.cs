@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class StartTutorial : MonoBehaviour
@@ -10,13 +11,14 @@ public class StartTutorial : MonoBehaviour
     public GameObject ui;
     public GameObject pause;
     public TMP_Text TMPText;
+    public Text texto;
     public GameObject listaUI;
     [TextArea(3, 10)]
     public string HOVERTEXT;
     // Start is called before the first frame update
     void Start()
     {
-        TMPText.text = HOVERTEXT;
+        texto.text = HOVERTEXT;
     }
 
     // Update is called once per frame
