@@ -14143,8 +14143,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: HOVERTEXT
-      value: "APOLO\r\nATAQUES LENTOS, COM DANO EM \xC1REA\r\nFIRE RATE = 0.5\r\nPODER
-        = 30\r\nALCANCE = 15\r"
+      value: "APOLO\nDANO EM \xC1REA\nFIRE RATE = 0.5\nPODER = 30\nALCANCE = 15"
       objectReference: {fileID: 0}
     - target: {fileID: 970490825, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_IsActive
