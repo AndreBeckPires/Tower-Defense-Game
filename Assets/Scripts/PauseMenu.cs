@@ -10,6 +10,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject listaDeInimigos;
     public GameObject GameMaster;
     public GameObject[] botoes;
+
+    public GameObject canvasInfobot;
+    public GameObject canvasInfoTop;
+    public GameObject inimigosButton;
+
     public bool listaOpen = false;
    void Update()
     {
@@ -21,6 +26,19 @@ public class PauseMenu : MonoBehaviour
                 botao.SetActive(true);
             }
             Toggle();
+        }
+        if(ui.activeSelf)
+        {
+            inimigosButton.SetActive(false);
+            canvasInfobot.SetActive(false);
+            canvasInfoTop.SetActive(false);
+          
+        }
+        else
+        {
+            canvasInfobot.SetActive(true);
+            canvasInfoTop.SetActive(true);
+            inimigosButton.SetActive(true);
         }
     }
 

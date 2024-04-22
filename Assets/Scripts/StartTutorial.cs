@@ -13,6 +13,14 @@ public class StartTutorial : MonoBehaviour
     public TMP_Text TMPText;
     public Text texto;
     public GameObject listaUI;
+
+    public GameObject canvasInfobot;
+    public GameObject canvasInfoTop;
+    public GameObject inimigosButton;
+    public GameObject shop;
+   
+
+
     [TextArea(3, 10)]
     public string HOVERTEXT;
     // Start is called before the first frame update
@@ -36,6 +44,23 @@ public class StartTutorial : MonoBehaviour
         else if(!ui.activeSelf && !pause.activeSelf)
         {
             Time.timeScale = 1.0f;
+        }
+
+        if(ui.activeSelf)
+        {
+            canvasInfobot.SetActive(false);
+            canvasInfoTop.SetActive(false);
+            inimigosButton.SetActive(false);
+            shop.SetActive(false);
+            
+        }
+        else
+        {
+            canvasInfobot.SetActive(true);
+            canvasInfoTop.SetActive(true);
+          //  inimigosButton.SetActive(true);
+            shop.SetActive(true);
+          
         }
     }
 }

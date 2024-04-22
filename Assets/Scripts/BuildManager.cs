@@ -39,6 +39,7 @@ public class BuildManager : MonoBehaviour
             if (PlayerStats.Money < tToBuild.cost)
             {
                 Debug.Log("poor");
+                tToBuild = null;
                 return;
             }
 
