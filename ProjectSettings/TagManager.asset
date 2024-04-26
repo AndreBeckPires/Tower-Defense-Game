@@ -10,6 +10,7 @@ TagManager:
   - way
   - Bullet
   - towerFall
+  - WAVESICON
   layers:
   - Default
   - TransparentFX

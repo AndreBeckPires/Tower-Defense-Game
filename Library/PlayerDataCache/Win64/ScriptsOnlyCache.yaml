@@ -1405,7 +1405,7 @@ ScriptsOnlyBuild:
     className: UnityMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 52239d6e4930bf70a1a2bb05579a51bc
+      Hash: f6878478dff489c63ff3a8df584e3d0a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseMenu
@@ -1507,7 +1507,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9fcf4cb27e34b6e4f406033b3027fe0a
+      Hash: 8ca7e5ab965a7b896beace0a01a5b26e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StartTutorial
@@ -2170,4 +2170,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/lvl 5.unity
   - Assets/Scenes/lvl 6.unity
   - Assets/Scenes/lvl 7.unity
-  playerPath: C:/Users/dedehhhhhhh/Desktop/Tower Defense.exe
+  playerPath: C:/Users/dedehhhhhhh/Desktop/builld/Tower Defense.exe
