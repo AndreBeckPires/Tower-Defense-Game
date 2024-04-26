@@ -27,12 +27,14 @@ public class StartTutorial : MonoBehaviour
     void Start()
     {
         texto.text = HOVERTEXT;
+
     }
 
     // Update is called once per frame
     public void close()
     {
         ui.SetActive(false);
+     
     }
 
     void Update()
@@ -46,21 +48,6 @@ public class StartTutorial : MonoBehaviour
             Time.timeScale = 1.0f;
         }
 
-        if(ui.activeSelf)
-        {
-            canvasInfobot.SetActive(false);
-            canvasInfoTop.SetActive(false);
-            inimigosButton.SetActive(false);
-            shop.SetActive(false);
-            
-        }
-        else
-        {
-            canvasInfobot.SetActive(true);
-            canvasInfoTop.SetActive(true);
-          //  inimigosButton.SetActive(true);
-            shop.SetActive(true);
-          
-        }
+      
     }
 }

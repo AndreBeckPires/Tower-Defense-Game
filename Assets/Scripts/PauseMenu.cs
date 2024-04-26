@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
 
@@ -14,6 +14,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject canvasInfobot;
     public GameObject canvasInfoTop;
     public GameObject inimigosButton;
+
+    public GameObject startScreen;
 
     public bool listaOpen = false;
    void Update()
@@ -27,18 +29,30 @@ public class PauseMenu : MonoBehaviour
             }
             Toggle();
         }
-        if(ui.activeSelf)
+        if (ui.activeSelf || startScreen.activeSelf)
         {
             inimigosButton.SetActive(false);
             canvasInfobot.SetActive(false);
             canvasInfoTop.SetActive(false);
-          
+            GameObject[] objetosComTag = GameObject.FindGameObjectsWithTag("WAVESICON");
+            foreach (GameObject objeto in objetosComTag)
+            {
+                // Faça o que você precisa com cada objeto encontrado aqui
+                objeto.GetComponent<Image>().enabled = false;
+            }
+
         }
         else
         {
             canvasInfobot.SetActive(true);
             canvasInfoTop.SetActive(true);
             inimigosButton.SetActive(true);
+            GameObject[] objetosComTag = GameObject.FindGameObjectsWithTag("WAVESICON");
+            foreach (GameObject objeto in objetosComTag)
+            {
+                // Faça o que você precisa com cada objeto encontrado aqui
+                objeto.GetComponent<Image>().enabled = true;
+            }
         }
     }
 

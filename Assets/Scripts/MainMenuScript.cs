@@ -74,4 +74,9 @@ public class MainMenuScript : MonoBehaviour
     {
         selectSavePanel.SetActive(false);
     }
+
+    public void backToMenuPhase()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

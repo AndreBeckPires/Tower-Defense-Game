@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5298081488868302505}
   m_Layer: 5
   m_Name: WAVES ICON
-  m_TagString: Untagged
+  m_TagString: WAVESICON
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
