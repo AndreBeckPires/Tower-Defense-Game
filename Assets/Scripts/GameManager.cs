@@ -36,9 +36,13 @@ public class GameManager : MonoBehaviour
     public void WinLevel()
     {
         Debug.Log("level finished");
-        PlayerPrefs.SetInt("levelReached", levelToUnlock);
-        SceneManager.LoadScene(nextLevel);
+        PlayerPrefs.SetInt("levelReached", levelToUnlock);      
 
+    }
+
+    public void goNext()
+    {
+        SceneManager.LoadScene(nextLevel);
     }
     public void reset()
     {

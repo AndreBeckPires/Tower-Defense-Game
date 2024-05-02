@@ -44,8 +44,14 @@ public class WaveSpawner : MonoBehaviour
     public int currentWaveCount;
 
     string nomePrefab;
+
+
+    public GameObject telaFinal;
+
+    public bool audioPlayed;
     void Awake()
     {
+        audioPlayed = false;
         timeBetweenWaves = 5f;
         countdown = timeBetweenWaves;
       
@@ -89,15 +95,26 @@ public class WaveSpawner : MonoBehaviour
 
         if (waveIndex == waves.Length && EnemiesAlive == 0)
         {
-            audioEndGame.Play(0);
+            if(!audioPlayed)
+            {
+                audioEndGame.Play(0);
+                audioPlayed = true;
+            }
+           this.enabled = false;
             gameManager.WinLevel();
-            this.enabled = false;
+            Invoke("TelaFinal", 1.5f);
 
         }
 
         
     }
 
+
+    void TelaFinal()
+    {
+        telaFinal.SetActive(true);
+       
+    }
     IEnumerator spawnWave()//coroutine que pode ser pausada
     {
         
