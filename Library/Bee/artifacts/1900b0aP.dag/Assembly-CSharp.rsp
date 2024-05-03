@@ -308,6 +308,7 @@
 "Assets/Scripts/Shop.cs"
 "Assets/Scripts/ShowNextEnemy.cs"
 "Assets/Scripts/StartTutorial.cs"
+"Assets/Scripts/TelaFinal.cs"
 "Assets/Scripts/timerController.cs"
 "Assets/Scripts/towerBuff.cs"
 "Assets/Scripts/Turret.cs"

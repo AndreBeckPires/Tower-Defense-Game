@@ -18,9 +18,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject startScreen;
 
     public bool listaOpen = false;
+    public GameObject ComTag;
+
+    void Start()
+    {
+        ComTag = GameObject.FindGameObjectWithTag("SHOP");
+    }
+
+
    void Update()
     {
-
+       
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             foreach (GameObject botao in botoes)
@@ -40,7 +48,8 @@ public class PauseMenu : MonoBehaviour
                 // Faça o que você precisa com cada objeto encontrado aqui
                 objeto.GetComponent<Image>().enabled = false;
             }
-
+            
+            ComTag.SetActive(false);
         }
         else
         {
@@ -53,6 +62,8 @@ public class PauseMenu : MonoBehaviour
                 // Faça o que você precisa com cada objeto encontrado aqui
                 objeto.GetComponent<Image>().enabled = true;
             }
+           
+            ComTag.SetActive(true);
         }
     }
 

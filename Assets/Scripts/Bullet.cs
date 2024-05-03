@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
 	public bool steal = false;
 	public int howMuch = 25;
 
+	public GameObject raio;
+	public bool isZeus;
 	public void Seek(Transform _target)
 	{
 		target = _target;
@@ -45,6 +47,11 @@ public class Bullet : MonoBehaviour
 
 	void HitTarget()
 	{
+
+		if (isZeus)
+		{
+			Instantiate(raio, target.transform.position + Vector3.up * 10.0f, Quaternion.Euler(90.0f, 0.0f, 0.0f));
+		}
 		GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
 		Destroy(effectIns, 5f);
 
@@ -62,6 +69,7 @@ public class Bullet : MonoBehaviour
 			PlayerStats.Money += howMuch;
 
 		}
+		
 		Destroy(gameObject);
 	}
 

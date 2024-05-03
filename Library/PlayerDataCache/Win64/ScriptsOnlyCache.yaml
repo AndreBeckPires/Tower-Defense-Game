@@ -21,6 +21,7 @@ ScriptsOnlyBuild:
     - Shop
     - ShowNextEnemy
     - StartTutorial
+    - TelaFinal
     - Turret
     - WaveSpawner
     - aresBuff
@@ -314,6 +315,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6992}
     - Class: 114
       Script: {instanceID: 7380}
+    - Class: 114
+      Script: {instanceID: 40350}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2011,7 +2014,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 96f95f775f72b39f271e0cf3c2e7455d
+      Hash: 5e274e8cf18ef25049a8f051dd3ccc19
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaveSpawner
@@ -2159,6 +2162,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 90496851872123c6ae7178510f8af8b2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TelaFinal
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
