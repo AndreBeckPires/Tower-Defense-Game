@@ -2973,13 +2973,13 @@ MonoBehaviour:
     cost: 100
   anotherTurretPrefab:
     prefab: {fileID: 202508144261195316, guid: e79ec3cc3a172f643914a531369ea82c, type: 3}
-    cost: 250
+    cost: 200
   tower3:
     prefab: {fileID: 7509486727627113983, guid: ea5998737e217df43b639899e4a99cf0, type: 3}
-    cost: 200
+    cost: 250
   t4:
     prefab: {fileID: 7509486727627113983, guid: 9cef227bc67aff7479f47a1470a88beb, type: 3}
-    cost: 300
+    cost: 200
   tSteal:
     prefab: {fileID: 2790079048584714787, guid: afd1269e9068e8b469a4332736c50f2d, type: 3}
     cost: 380
@@ -4305,7 +4305,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 624259749}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Toggle
+        m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4906,11 +4906,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: value
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: HOVERTEXT
-      value: "BOREAS\r\nDESACELERA INIMIGOS\r\nPOWER = 30\r\nALCANCE = 20\r"
+      value: "BOREAS\r\nDESACELERA INIMIGOS\r\nALCANCE = 20\r"
       objectReference: {fileID: 0}
     - target: {fileID: 970490825, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_IsActive
@@ -5094,7 +5094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336646625476466628, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_Text
-      value: $200
+      value: $250
       objectReference: {fileID: 0}
     - target: {fileID: 3188420232507216098, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_SizeDelta.y
@@ -15575,11 +15575,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: value
-      value: 250
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: HOVERTEXT
-      value: "APOLO\nDANO EM \xC1REA\nFIRE RATE = 0.5\nPODER = 30\nALCANCE = 15"
+      value: "APOLO\nDANO EM \xC1REA\nFIRE RATE = 0.5\nPODER = 50\nALCANCE = 15"
       objectReference: {fileID: 0}
     - target: {fileID: 970490825, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_IsActive
@@ -15763,7 +15763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336646625476466628, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_Text
-      value: $250
+      value: $200
       objectReference: {fileID: 0}
     - target: {fileID: 3188420232507216098, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_SizeDelta.y
@@ -18909,7 +18909,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d620e137bc08e5e4d8950e8625812228, type: 3}
-    m_FontSize: 80
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -23085,7 +23085,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d620e137bc08e5e4d8950e8625812228, type: 3}
-    m_FontSize: 80
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -23607,7 +23607,7 @@ PrefabInstance:
       objectReference: {fileID: 1686200669}
     - target: {fileID: 5942028176788413633, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: startMoney
-      value: 500
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413634, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: TMPText
@@ -23631,7 +23631,7 @@ PrefabInstance:
       objectReference: {fileID: 498196631}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waveCountdownText
@@ -23643,11 +23643,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[1].rate
-      value: 0.3
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[2].rate
-      value: 0.8
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[3].rate
@@ -23666,16 +23666,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: waves.Array.data[7].rate
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[1].count
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[2].count
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[3].count
@@ -23691,6 +23695,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[6].count
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: waves.Array.data[7].count
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
@@ -23712,11 +23720,11 @@ PrefabInstance:
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[1].enemyPrefab
       value: 
-      objectReference: {fileID: 1038346516710585266, guid: 6213b4e87eb57594f9470ebf8b4b5553, type: 3}
+      objectReference: {fileID: 1038346516710585266, guid: 0b490f2e55c49374a94ce84936bf708d, type: 3}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[2].enemyPrefab
       value: 
-      objectReference: {fileID: 1038346516710585266, guid: 0b490f2e55c49374a94ce84936bf708d, type: 3}
+      objectReference: {fileID: 1038346516710585266, guid: 6213b4e87eb57594f9470ebf8b4b5553, type: 3}
     - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: waves.Array.data[3].enemyPrefab
       value: 
@@ -23729,6 +23737,10 @@ PrefabInstance:
       propertyPath: waves.Array.data[6].enemyPrefab
       value: 
       objectReference: {fileID: 1038346516710585266, guid: 2c3ad0de157204b4790aaa04b94dbea6, type: 3}
+    - target: {fileID: 5942028176788413635, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: waves.Array.data[7].enemyPrefab
+      value: 
+      objectReference: {fileID: 1038346516710585266, guid: 6213b4e87eb57594f9470ebf8b4b5553, type: 3}
     - target: {fileID: 5942028176788413638, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: m_Name
       value: GameMaster
@@ -23785,6 +23797,18 @@ PrefabInstance:
       propertyPath: botoes.Array.data[4]
       value: 
       objectReference: {fileID: 1831771059}
+    - target: {fileID: 5942028176788413639, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: endgameScreens.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942028176788413639, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: endgameScreens.Array.data[0]
+      value: 
+      objectReference: {fileID: 1686200669}
+    - target: {fileID: 5942028176788413639, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
+      propertyPath: endgameScreens.Array.data[1]
+      value: 
+      objectReference: {fileID: 471649738}
     - target: {fileID: 5942028176788413644, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -32006,7 +32030,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: value
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: HOVERTEXT
@@ -32207,9 +32231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336646625476466628, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_Text
-      value: '$300
-
-'
+      value: $200
       objectReference: {fileID: 0}
     - target: {fileID: 3188420232507216098, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_SizeDelta.y
@@ -34492,7 +34514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: HOVERTEXT
-      value: "ZEUS\r\nDANO FREQUENTE\r\nFREQU\xCANCIA = 1\r\nPODER = 50\r\nALCANCE
+      value: "ZEUS\r\nDANO FREQUENTE\r\nFREQU\xCANCIA = 1\r\nPODER = 30\nALCANCE
         = 15\r"
       objectReference: {fileID: 0}
     - target: {fileID: 970490825, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}

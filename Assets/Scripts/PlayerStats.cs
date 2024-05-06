@@ -31,9 +31,23 @@ public class PlayerStats : MonoBehaviour
         {
             audioEndGame.Play(0);
             ended = true;
+            GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach (GameObject obj in objectsWithTag)
+            {
+                // Do something with obj
+                Destroy(obj);
+            }
         }
         if(Lives < 0)
         {
+            GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach (GameObject obj in objectsWithTag)
+            {
+                // Do something with obj
+                Destroy(obj);
+            }
             Destroy(audioS);
         }
     }

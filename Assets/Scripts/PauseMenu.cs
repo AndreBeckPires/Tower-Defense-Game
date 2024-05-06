@@ -17,6 +17,8 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject startScreen;
 
+    public GameObject[] endgameScreens;
+
     public bool listaOpen = false;
     public GameObject ComTag;
 
@@ -28,43 +30,48 @@ public class PauseMenu : MonoBehaviour
 
    void Update()
     {
+
+        if(!endgameScreens[0].activeSelf && !endgameScreens[1].activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+            {
+                foreach (GameObject botao in botoes)
+                {
+                    botao.SetActive(true);
+                }
+                Toggle();
+            }
+            if (ui.activeSelf || startScreen.activeSelf)
+            {
+                inimigosButton.SetActive(false);
+                canvasInfobot.SetActive(false);
+                canvasInfoTop.SetActive(false);
+                GameObject[] objetosComTag = GameObject.FindGameObjectsWithTag("WAVESICON");
+                foreach (GameObject objeto in objetosComTag)
+                {
+                    // Faça o que você precisa com cada objeto encontrado aqui
+                    objeto.GetComponent<Image>().enabled = false;
+                }
+
+                ComTag.SetActive(false);
+            }
+            else
+            {
+                canvasInfobot.SetActive(true);
+                canvasInfoTop.SetActive(true);
+                inimigosButton.SetActive(true);
+                GameObject[] objetosComTag = GameObject.FindGameObjectsWithTag("WAVESICON");
+                foreach (GameObject objeto in objetosComTag)
+                {
+                    // Faça o que você precisa com cada objeto encontrado aqui
+                    objeto.GetComponent<Image>().enabled = true;
+                }
+
+                ComTag.SetActive(true);
+            }
+        }
        
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
-        {
-            foreach (GameObject botao in botoes)
-            {
-                botao.SetActive(true);
-            }
-            Toggle();
-        }
-        if (ui.activeSelf || startScreen.activeSelf)
-        {
-            inimigosButton.SetActive(false);
-            canvasInfobot.SetActive(false);
-            canvasInfoTop.SetActive(false);
-            GameObject[] objetosComTag = GameObject.FindGameObjectsWithTag("WAVESICON");
-            foreach (GameObject objeto in objetosComTag)
-            {
-                // Faça o que você precisa com cada objeto encontrado aqui
-                objeto.GetComponent<Image>().enabled = false;
-            }
-            
-            ComTag.SetActive(false);
-        }
-        else
-        {
-            canvasInfobot.SetActive(true);
-            canvasInfoTop.SetActive(true);
-            inimigosButton.SetActive(true);
-            GameObject[] objetosComTag = GameObject.FindGameObjectsWithTag("WAVESICON");
-            foreach (GameObject objeto in objetosComTag)
-            {
-                // Faça o que você precisa com cada objeto encontrado aqui
-                objeto.GetComponent<Image>().enabled = true;
-            }
-           
-            ComTag.SetActive(true);
-        }
+       
     }
 
     public void Toggle()
@@ -150,6 +157,12 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("quit game");
         Application.Quit();
+    }
+
+
+    public void NextScene()
+    {
+        GameMaster.GetComponent<GameManager>().goNext();
     }
 
 }
