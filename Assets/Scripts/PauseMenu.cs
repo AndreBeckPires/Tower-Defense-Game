@@ -22,16 +22,24 @@ public class PauseMenu : MonoBehaviour
     public bool listaOpen = false;
     public GameObject ComTag;
 
+    public GameObject speedupbutton;
+  
+
+
+
+
     void Start()
     {
         ComTag = GameObject.FindGameObjectWithTag("SHOP");
+       
     }
 
 
    void Update()
     {
+      
 
-        if(!endgameScreens[0].activeSelf && !endgameScreens[1].activeSelf)
+        if (!endgameScreens[0].activeSelf && !endgameScreens[1].activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
             {
@@ -43,6 +51,7 @@ public class PauseMenu : MonoBehaviour
             }
             if (ui.activeSelf || startScreen.activeSelf)
             {
+                speedupbutton.SetActive(false);
                 inimigosButton.SetActive(false);
                 canvasInfobot.SetActive(false);
                 canvasInfoTop.SetActive(false);
@@ -57,6 +66,7 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
+                speedupbutton.SetActive(true);
                 canvasInfobot.SetActive(true);
                 canvasInfoTop.SetActive(true);
                 inimigosButton.SetActive(true);
@@ -70,6 +80,8 @@ public class PauseMenu : MonoBehaviour
                 ComTag.SetActive(true);
             }
         }
+
+  
        
        
     }
@@ -92,6 +104,7 @@ public class PauseMenu : MonoBehaviour
         }
         if(!ui.activeSelf)
         {
+            this.GetComponent<changeTimeSpeed>().clicked = false;
             Time.timeScale = 1.0f;
         }
        
@@ -165,4 +178,8 @@ public class PauseMenu : MonoBehaviour
         GameMaster.GetComponent<GameManager>().goNext();
     }
 
+
+
+
+ 
 }

@@ -34,7 +34,7 @@ public class StartTutorial : MonoBehaviour
     public void close()
     {
         ui.SetActive(false);
-     
+        Time.timeScale = 1.0f;
     }
 
     void Update()
@@ -43,11 +43,7 @@ public class StartTutorial : MonoBehaviour
         {
             Time.timeScale = 0f;
         }
-        else if(!ui.activeSelf && !pause.activeSelf)
-        {
-            Time.timeScale = 1.0f;
-        }
-
+      
       
     }
 }
