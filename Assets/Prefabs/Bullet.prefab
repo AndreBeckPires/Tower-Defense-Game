@@ -102,3 +102,5 @@ MonoBehaviour:
   eDamage: 30
   steal: 0
   howMuch: 25
+  raio: {fileID: 0}
+  isZeus: 0

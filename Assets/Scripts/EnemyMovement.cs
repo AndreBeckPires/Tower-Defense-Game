@@ -10,7 +10,9 @@ public class EnemyMovement : MonoBehaviour
     private int wavepointIndex = 0;
 
     public GameObject audioS;
+    public GameObject audioZeus;
     public AudioSource audio;
+    public AudioSource audio2;
     public bool canMoove;
     private Enemy enemy;
     public bool stopped;
@@ -22,7 +24,9 @@ public class EnemyMovement : MonoBehaviour
     {
         canMoove = true;
         audioS = GameObject.Find("dTakenAudio");
+
         audio = audioS.GetComponent<AudioSource>();
+      
         enemy = GetComponent<Enemy>();
         target = waypoints.points[0];//seleciona o primeiro ponto como targe
         thisSpeed = enemy.startSpeed;
