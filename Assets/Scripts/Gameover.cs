@@ -11,6 +11,23 @@ public class Gameover : MonoBehaviour
     void OnEnable()
     {
         roundsTxt.text = PlayerStats.Rounds.ToString();
+
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Tower");
+
+        foreach (GameObject obj in objectsWithTag)
+        {
+            // Do something with obj
+            Destroy(obj);
+        }
+
+        GameObject[] objectsWithTag2 = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject obj in objectsWithTag2)
+        {
+            // Do something with obj
+            Destroy(obj);
+        }
+
     }
 
     public void Retry()

@@ -48,4 +48,9 @@ public class GameManager : MonoBehaviour
     {
         gameOver = false;
     }
+
+    public bool isOver()
+    {
+        return gameOver;
+    }
 }

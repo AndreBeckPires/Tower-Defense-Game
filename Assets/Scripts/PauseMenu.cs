@@ -38,7 +38,29 @@ public class PauseMenu : MonoBehaviour
    void Update()
     {
       
+        if(endgameScreens[0].activeSelf || endgameScreens[1].activeSelf)
+        {
+            if(endgameScreens[0].activeSelf)
+            {
+                endgameScreens[1].SetActive(false);
+            }
+            if (endgameScreens[1].activeSelf)
+            {
+                endgameScreens[0].SetActive(false);
+            }
+            speedupbutton.SetActive(false);
+            inimigosButton.SetActive(false);
+            canvasInfobot.SetActive(false);
+            canvasInfoTop.SetActive(false);
+            GameObject[] objetosComTag = GameObject.FindGameObjectsWithTag("WAVESICON");
+            foreach (GameObject objeto in objetosComTag)
+            {
+                // Faça o que você precisa com cada objeto encontrado aqui
+                objeto.GetComponent<Image>().enabled = false;
+            }
 
+            ComTag.SetActive(false);
+        }
         if (!endgameScreens[0].activeSelf && !endgameScreens[1].activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))

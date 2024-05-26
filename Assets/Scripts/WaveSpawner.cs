@@ -93,7 +93,7 @@ public class WaveSpawner : MonoBehaviour
         waveCountdownText.text = "Proxima onda: " +  Mathf.Round(countdown).ToString();//corta decimais
 
 
-        if (waveIndex == waves.Length && EnemiesAlive == 0)
+        if (waveIndex == waves.Length && EnemiesAlive == 0 && !gameManager.isOver())
         {
             if(!audioPlayed)
             {
