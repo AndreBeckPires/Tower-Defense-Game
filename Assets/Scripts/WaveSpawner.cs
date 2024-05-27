@@ -44,7 +44,7 @@ public class WaveSpawner : MonoBehaviour
     public int currentWaveCount;
 
     string nomePrefab;
-
+    bool firstRound;
 
     public GameObject telaFinal;
 
@@ -65,6 +65,8 @@ public class WaveSpawner : MonoBehaviour
             distanceIcons += 36f;
         }
         Destroy(waveCounterIcons[1]);
+        firstRound = true;
+
     }
 
 
@@ -79,7 +81,6 @@ public class WaveSpawner : MonoBehaviour
         }
         if(countdown <= 0f && EnemiesAlive <= 0)
         {
-           
             updateWaveCounter();
             stopSpawnWave = false;
             StartCoroutine(spawnWave());
@@ -87,12 +88,32 @@ public class WaveSpawner : MonoBehaviour
             updateNextEnemy();
             return;
         }
-
+        
         countdown -= Time.deltaTime;
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
         waveCountdownText.text = "Proxima onda: " +  Mathf.Round(countdown).ToString();//corta decimais
 
-
+        if (waveIndex == 0 && firstRound)
+        {
+            nomePrefab = waves[0].enemyPrefab.name;
+            firstRound = false;
+        }
+        if (nomePrefab == "Enemy")
+        {
+            nextEnemy.GetComponent<ShowNextEnemy>().changeImage(0);
+        }
+        if (nomePrefab == "Enemy 2")
+        {
+            nextEnemy.GetComponent<ShowNextEnemy>().changeImage(1);
+        }
+        if (nomePrefab == "Enemy 4")
+        {
+            nextEnemy.GetComponent<ShowNextEnemy>().changeImage(2);
+        }
+        if (nomePrefab == "Enemy 3")
+        {
+            nextEnemy.GetComponent<ShowNextEnemy>().changeImage(3);
+        }
         if (waveIndex == waves.Length && EnemiesAlive == 0 && !gameManager.isOver())
         {
             if(!audioPlayed)
@@ -172,6 +193,7 @@ public class WaveSpawner : MonoBehaviour
     {
 
         {
+      
             if (waveIndex + 1 < waves.Length)
             {
                 nomePrefab = waves[waveIndex + 1].enemyPrefab.name;
