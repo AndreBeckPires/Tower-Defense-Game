@@ -23154,7 +23154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413633, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: startMoney
-      value: 300
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 5942028176788413634, guid: ca63e46e9acee74479e14bf9f11de3b2, type: 3}
       propertyPath: TMPText
@@ -24325,7 +24325,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: value
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 506962107, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: HOVERTEXT
@@ -24543,6 +24543,10 @@ PrefabInstance:
     - target: {fileID: 1034403655492017321, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_Name
       value: ShopTurretItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2336646625476466628, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
+      propertyPath: m_Text
+      value: $120
       objectReference: {fileID: 0}
     - target: {fileID: 3188420232507216098, guid: 1acdda48167b67e4e92f6215ff4a79d7, type: 3}
       propertyPath: m_SizeDelta.y
@@ -25157,7 +25161,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1209288404
 MonoBehaviour:
@@ -40287,7 +40291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurret:
     prefab: {fileID: 2790079048584714787, guid: 58d50ffb274c24e4e8fba830f0436f9b, type: 3}
-    cost: 100
+    cost: 120
   anotherTurretPrefab:
     prefab: {fileID: 202508144261195316, guid: e79ec3cc3a172f643914a531369ea82c, type: 3}
     cost: 200

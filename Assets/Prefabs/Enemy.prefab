@@ -139,7 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioS: {fileID: 0}
+  audioZeus: {fileID: 0}
   audio: {fileID: 0}
+  audio2: {fileID: 0}
   canMoove: 0
   stopped: 0
   thisSpeed: 0
@@ -653,6 +655,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8662678336086135554, guid: fdfd9cef79b15f2439bab66fcbec5ee7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1356944241255443110, guid: fdfd9cef79b15f2439bab66fcbec5ee7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fdfd9cef79b15f2439bab66fcbec5ee7, type: 3}
       propertyPath: m_Name
       value: Minotaur@Walk
@@ -661,6 +671,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f1266940fcef6e74db1c2e62185028bb, type: 2}
+    - target: {fileID: 8482637178489366800, guid: fdfd9cef79b15f2439bab66fcbec5ee7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdfd9cef79b15f2439bab66fcbec5ee7, type: 3}
 --- !u!1 &5578987872393278372 stripped

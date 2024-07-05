@@ -65,11 +65,15 @@ public class PauseMenu : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
             {
-                foreach (GameObject botao in botoes)
+                if(!listaDeInimigos.activeSelf)
                 {
-                    botao.SetActive(true);
+                    foreach (GameObject botao in botoes)
+                    {
+                        botao.SetActive(true);
+                    }
+                    Toggle();
                 }
-                Toggle();
+
             }
             if (ui.activeSelf || startScreen.activeSelf)
             {
